@@ -1,0 +1,7 @@
+site_name: My Docs
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: deep orange
+    accent: amber
