@@ -1,17 +1,20 @@
-# Welcome to MkDocs
+# Box3 社区文档
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这是一个由 AlanBestHacker 创建的，内容来自社区的第三方 Box3 文档。如果要了解更多信息，请看[关于文档](about.md)
 
-## Commands
+!!! warning "文档暂不完整"
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+    本文档尚未编写完毕，许多页面还未完工。在这种情况下我们无法保证文档的正确性和更新。
+    如果你想要为编写文档贡献一份力量，请看[为文档贡献](about.md#_3)
 
-## Project layout
+## 开始学习
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+本文档设置了三种学习方法，分别是[学习](learn/index.md)、[实例教程](example/index.md)和[API 参考](api/index.md)
+!!! note "关于三种模式"
+
+    #### 学习
+    通过一条完整的学习路线来学习一个概念或者技巧，建议自己动手尝试，来加强理解
+    #### 实例教程
+    通过一个完整的项目实例，一步一步地学会综合运用知识解决需求和问题。内容比较高阶，需要动手实践
+    #### API文档
+    是对官方文档的补充和说明，可用于查阅相关细节

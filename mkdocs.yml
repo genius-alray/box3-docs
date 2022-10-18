@@ -1,7 +1,140 @@
-site_name: My Docs
+site_name: Box3 社区文档
+repo_url: https://github.com/alan-best/box3-docs
+repo_name: box3-docs
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.expand
+    - content.tabs.link
   language: zh
   palette:
     primary: deep orange
     accent: amber
+  custom_dir: overrides
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: "100%"
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+  - minify:
+      minify_html: true
+nav:
+  - 主页:
+      - 介绍:
+          - 欢迎: index.md
+          - 关于文档: about.md
+          - 更新: changes.md
+  - 学习:
+      - learn/index.md
+      - 粒子特效:
+          - learn/particle/index.md
+  - 实例教程:
+      - example/index.md
+  - API参考:
+      - api/index.md
+# - Getting started:
+#   - Installation: getting-started.md
+#   - Creating your site: creating-your-site.md
+#   - Publishing your site: publishing-your-site.md
+#   - Customization: customization.md
+#   - Browser support: browser-support.md
+#   - Philosophy: philosophy.md
+#   - Alternatives: alternatives.md
+#   - License: license.md
+#   - Changelog:
+#     - changelog/index.md
+#     - How to upgrade: upgrade.md
+# - Setup:
+#   - Changing the colors: setup/changing-the-colors.md
+#   - Changing the fonts: setup/changing-the-fonts.md
+#   - Changing the language: setup/changing-the-language.md
+#   - Changing the logo and icons: setup/changing-the-logo-and-icons.md
+#   - Ensuring data privacy: setup/ensuring-data-privacy.md
+#   - Setting up navigation: setup/setting-up-navigation.md
+#   - Setting up site search: setup/setting-up-site-search.md
+#   - Setting up site analytics: setup/setting-up-site-analytics.md
+#   - Setting up social cards: setup/setting-up-social-cards.md
+#   - Setting up tags: setup/setting-up-tags.md
+#   - Setting up versioning: setup/setting-up-versioning.md
+#   - Setting up the header: setup/setting-up-the-header.md
+#   - Setting up the footer: setup/setting-up-the-footer.md
+#   - Adding a git repository: setup/adding-a-git-repository.md
+#   - Adding a comment system: setup/adding-a-comment-system.md
+#   - Building for offline usage: setup/building-for-offline-usage.md
+#   - Extensions:
+#     - setup/extensions/index.md
+#     - Python Markdown: setup/extensions/python-markdown.md
+#     - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+# - Reference:
+#   - reference/index.md
+#   - Admonitions: reference/admonitions.md
+#   - Annotations: reference/annotations.md
+#   - Buttons: reference/buttons.md
+#   - Code blocks: reference/code-blocks.md
+#   - Content tabs: reference/content-tabs.md
+#   - Data tables: reference/data-tables.md
+#   - Diagrams: reference/diagrams.md
+#   - Footnotes: reference/footnotes.md
+#   - Formatting: reference/formatting.md
+#   - Grids: reference/grids.md
+#   - Icons, Emojis: reference/icons-emojis.md
+#   - Images: reference/images.md
+#   - Lists: reference/lists.md
+#   - MathJax: reference/mathjax.md
+#   - Tooltips: reference/tooltips.md
+# - Insiders:
+#   - insiders/index.md
+#   - Getting started:
+#     - Installation: insiders/getting-started.md
+#     - Changelog: insiders/changelog.md
+# - Blog:
+#   - blog/index.md
+#   - 2022:
+#     - blog/2022/chinese-search-support.md
+#   - 2021:
+#     - blog/2021/the-past-present-and-future.md
+#     - blog/2021/excluding-content-from-search.md
+#     - blog/2021/search-better-faster-smaller.md
