@@ -72,7 +72,7 @@ entity.particleColor = [
 </div>
 对于颜色属性，若两个颜色之间进行过渡，则会显现出两种颜色的混合颜色。
 
-```javascript title="颜色过渡混合示例"
+```javascript title="颜色过渡混合示例" hl_lines="6-14"
 entity.particleLimit = 5000;
 entity.particleRate = 500;
 entity.particleLifetime = 3;
