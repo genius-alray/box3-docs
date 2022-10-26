@@ -1,5 +1,6 @@
 site_name: Box3 社区文档
 repo_url: https://github.com/alan-best/box3-docs
+edit_uri: edit/main/docs/
 repo_name: box3-docs
 theme:
   name: material
