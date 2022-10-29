@@ -78,6 +78,8 @@ nav:
             - 第一行代码: learn/javascript/first-line.md
             - 数据: learn/javascript/datas.md
             - 基本运算: learn/javascript/count.md
+            - 变量: learn/javascript/variable.md
+            - 对象: learn/javascript/object.md
   - 实例教程:
       - example/index.md
   - API参考:
