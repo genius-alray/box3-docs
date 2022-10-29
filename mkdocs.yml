@@ -74,7 +74,10 @@ nav:
         - 熟悉编辑器: learn/editor.md
         - 基础javascript:
             - 入门: learn/javascript/index.md
-            - 数据和计算: learn/javascript/data-and-cal.md
+            - 编程的本质: learn/javascript/root.md
+            - 第一行代码: learn/javascript/first-line.md
+            - 数据: learn/javascript/datas.md
+            - 基本运算: learn/javascript/count.md
   - 实例教程:
       - example/index.md
   - API参考:
