@@ -76,10 +76,7 @@ nav:
             - 入门: learn/javascript/index.md
             - 编程的本质: learn/javascript/root.md
             - 第一行代码: learn/javascript/first-line.md
-            - 数据: learn/javascript/datas.md
-            - 基本运算: learn/javascript/count.md
-            - 变量: learn/javascript/variable.md
-            - 对象: learn/javascript/object.md
+            - 数据,计算和变量: learn/javascript/data&count.md
   - 实例教程:
       - example/index.md
   - API参考:
