@@ -239,7 +239,7 @@
     ```javascript
     let markXiaoming = 90;
     ```
-    ??? tip "变量名规范"
+    ???+ tip inline end "变量名规范"
         一般来说，使用英文命名变量。
         其一可以增加代码美观，其二便于我们的输入。
 
