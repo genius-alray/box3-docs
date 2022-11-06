@@ -76,8 +76,12 @@ nav:
             - 入门: learn/javascript/index.md
             - 编程的本质: learn/javascript/root.md
             - 第一行代码: learn/javascript/first-line.md
-            - 数据,计算和变量: learn/javascript/data&count.md
+            - 数据,计算和变量: learn/javascript/data-and-count.md
             - 流程控制: learn/javascript/process.md
+        - 正式开始:
+            - 正式开始: learn/boxjs/index.md
+            - 第一行代码: learn/boxjs/first-line.md
+            - 万物的起源: learn/boxjs/world.md
   - 实例教程:
       - example/index.md
   - API参考:
