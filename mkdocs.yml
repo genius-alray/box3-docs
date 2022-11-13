@@ -24,6 +24,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - tables
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -72,6 +73,8 @@ nav:
       - learn/index.md
       - 粒子特效:
           - learn/particle/index.md
+      - Box3通用属性:
+          - learn/box3-general-properties/box3vector3.md
       - JavaScript:
           - learn/js/index.md
           - 基础教程:
