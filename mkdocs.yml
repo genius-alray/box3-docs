@@ -16,6 +16,10 @@ theme:
     primary: deep orange
     accent: amber
   custom_dir: overrides
+extra_css:
+  - _assets/icons.css
+extra_javascript:
+  - _assets/iconsParser.js
 
 markdown_extensions:
   - abbr
@@ -47,7 +51,14 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/icons
   - pymdownx.tilde
+  - tables
 plugins:
   - search
   - glightbox:
@@ -79,10 +90,26 @@ nav:
               - 开始: learn/js/base/index.md
               - Hello, World!: learn/js/base/01-hello-world.md
               - 欢迎玩家: learn/js/base/02-greeting.md
+      - SQL快速入门: learn/sql.md
+      - OOP（面向对象编程）快速入门: learn/oop.md
   - 实例教程:
       - example/index.md
   - API参考:
       - api/index.md
+      - <icon> 图标参考 |namespace</icon>: api/icons.md
+      - <icon> 世界 |object</icon>: api/world.md
+      - <icon> 方块 |object</icon>: api/voxels.md
+      - <icon> 实体 |class protected</icon>: api/player.md
+      - <icon> 玩家 |class protected</icon>: api/entity.md
+      - <icon> 事件 |event</icon>:
+          - <icon> Box3TickEvent|event</icon>: api/event/Box3TickEvent.md
+      - <icon> 数据库 |enum</icon>: api/database.md
+      - <icon> 数据结构类型 |type</icon>: api/type.md
+      - <icon> 动画 |signature</icon>: api/animation.md
+    #   - "<icon> 世界 |object</icon>": api/world.md
+    #   - "<icon> 世界 |object</icon>": api/world.md
+    #   - "<icon> 世界 |object</icon>": api/world.md
+    #   - "<icon> 世界 |object</icon>": api/world.md
 # - Getting started:
 #   - Installation: getting-started.md
 #   - Creating your site: creating-your-site.md
