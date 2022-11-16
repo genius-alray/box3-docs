@@ -7,7 +7,7 @@
 
 #### 面向过程（Procedure Oriented）
 
-顾名思义，程序侧重于过程，即**做什么**，例如函数
+顾名思义，程序侧重于过程，即 **做什么** ，例如函数
 
 程序将任务分解为一段一段的过程，然后用函数以及方法完成
 
@@ -191,7 +191,7 @@ classDiagram
 
 ---
 
-!!! note "本文参考文献"
+!!! quote "本文参考文献"
 
       - [Object-oriented programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
       - [JavaScript 对象基础](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Basics)

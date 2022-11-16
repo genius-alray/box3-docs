@@ -1,0 +1,287 @@
+
+
+
+removeCollisionFilter (aSelector: Box3SelectorString, bSelector: Box3SelectorString) : void
+移除碰撞过滤器，不再关闭两个实体组aSelector、bSelector之间的碰撞
+aSelector: Box3SelectorString 实体组A
+bSelector: Box3SelectorString 实体组B
+
+clearCollisionFilters () : void
+清除所有的碰撞过滤器
+
+collisionFilters () : String[][]
+返回当前所有的碰撞过滤器
+return String[][] 所有的过滤器
+Example: `world.collisionFilters().forEach(([ a, b ]) => console.log(a, b)) // 打印全部碰撞过滤器`
+
+raycast (origin: Box3Vector3, direction: Box3Vector3, options?: Partial<Box3RaycastOptions>) : Box3RaycastResult
+射线检测，从 origin原点位置向 direction 方向投射一条隐形的射线，返回碰到的实体或方块
+origin: Box3Vector3 射线的起点
+direction: Box3Vector3 射线的方向
+options?: Box3RaycastOptions 选项配置参数
+return Box3RaycastResult 射线结果
+Example: 
+```
+/* 按下左键，在玩家位置向脚下发射一条射线，在控制台输出检测结果 */
+world.onPress(({ button, entity }) => {
+    if(button === 'action0'){
+       const res = world.raycast( entity.position, new Box3Vector3(0,-1,0))
+       console.log(JSON.stringify(res))
+    }
+})
+```
+Box3RaycastOptions: https://docs.box3.codemao.cn/box3raycastoptions.html
+Box3RaycastResult: https://docs.box3.codemao.cn/box3raycastresult.html
+
+searchBox (bounds: Box3Bounds3) : Box3Entity[]
+bounds: Box3Bounds3 Box3Zone区域
+return Box3Entity[] 在当前区域的所有实体
+
+animate (keyframes: Partial<Box3WorldKeyframe>[], playbackInfo?: Partial<Box3AnimationPlaybackConfig>) : Box3Animation<Box3WorldKeyframe, Box3World>
+创建一个关键帧动画 Box3Animation
+keyframes: Box3WorldKeyframe[] 关键帧的数据
+playbackInfo?: Box3AnimationPlaybackConfig 动画播放参数
+return Box3Animation 创建出来的动画对象
+Example:
+```
+const ani = world.animate([
+    { rainDensity: 0.0 },
+    { rainDensity: 1.0 },
+], {
+    iterations: Infinity,//无限循环
+    direction: Box3AnimationDirection.REVERSE,//雨量反复变大变小
+    duration: 16 * 5,//5秒1个周期(每秒16帧)
+})
+
+world.onPress(({ button }) => {
+    if (button === Box3ButtonType.ACTION0) {//左键停雨
+        ani.cancel()
+        world.rainDensity = 0
+    }
+})
+```
+
+*getAnimations () : Box3Animation<Box3WorldKeyframe, Box3World>[]
+获取所有的动画对象
+return Box3Animation[] 动画对象
+
+*getEntityAnimations() : Box3Animation<Box3EntityKeyframe, Box3Entity>[]
+获取所有实体的动画对象
+return Box3Animation[] 动画对象
+
+*getPlayerAnimations () : Box3Animation<Box3PlayerKeyframe, Box3Player>[]
+获取所有玩家的动画对象
+return Box3Animation[] 动画对象
+
+onTick / nextTick () : Box3EventChannel<Box3TickEvent> / Box3EventFuture<Box3TickEvent>
+世界时刻(或未来)推动时触发
+return Box3EventChannel / Box3EventFuture
+
+onTakeDamage / nextTakeDamage () : Box3EventChannel<Box3DamageEvent> / Box3EventFuture<Box3DamageEvent>
+当实体收到伤害(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+onDie / nextDie () : Box3EventChannel<Box3DieEvent> / Box3EventFuture<Box3DieEvent>
+当实体死亡(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+onPlayerJoin / nextPlayerJoin () : Box3EventChannel<Box3PlayerEntityEvent> / Box3EventFuture<Box3PlayerEntityEvent>
+当玩家进入世界(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+onPlayerLeave / nextPlayerLeave () : Box3EventChannel<Box3PlayerEntityEvent> / Box3EventFuture<Box3PlayerEntityEvent>
+当玩家离开世界(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+onEntityCreate / nextEntityCreate () : Box3EventChannel<Box3EntityEvent> / Box3EventFuture<Box3EntityEvent>
+当实体被创建(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+onEntityDestroy / nextEntityDestroy () : Box3EventChannel<Box3EntityEvent> / Box3EventFuture<Box3EntityEvent>
+当实体被销毁(或未来)触发
+return Box3EventChannel / Box3EventFuture
+
+say (message: String) : void
+向世界中所有玩家广播
+message : String 广播内容
+
+onChat / nextChat () : Box3EventChannel<Box3ChatEvent> / Box3EventFuture<Box3ChatEvent>
+当玩家发言(或未来)触发
+
+onClick / nextClick () : Box3EventChannel<Box3ClickEvent> / Box3EventFuture<Box3ClickEvent>
+当玩家点击(或未来)触发
+
+onPress / nextPress () : Box3EventChannel<Box3InputEvent> / Box3EventFuture<Box3InputEvent>
+当玩家按下按键(或未来)触发
+
+onRelease / nextRelease () : Box3EventChannel<Box3InputEvent> / Box3EventFuture<Box3InputEvent>
+当玩家松开按键(或未来)触发
+
+onEntityContact / nextEntityContact () : Box3EventChannel<Box3EntityContactEvent> / Box3EventFuture<Box3EntityContactEvent>
+当实体碰撞(或未来)触发
+
+onEntitySeparate / nextEntitySeparate () : Box3EventChannel<Box3EntityContactEvent> / Box3EventFuture<Box3EntityContactEvent>
+当实体分开(或未来)触发
+
+onVoxelContact / nextVoxelContact () : Box3EventChannel<Box3VoxelContactEvent> / Box3EventFuture<Box3VoxelContactEvent>
+当实体碰到方块(或未来)触发
+
+onVoxelSeparate / nextVoxelSeparate () : Box3EventChannel<Box3VoxelContactEvent> / Box3EventFuture<Box3VoxelContactEvent>
+当实体离开方块(或未来)触发
+
+onFluidEnter / nextFluidEnter () : Box3EventChannel<Box3FluidContactEvent> / Box3EventFuture<Box3FluidContactEvent>
+当实体进入液体(或未来)触发
+
+onFluidLeave / nextFluidLeave() : Box3EventChannel<Box3FluidContactEvent> / Box3EventFuture<Box3FluidContactEvent>
+当实体离开液体(或未来)触发
+
+zones () : Box3Zone[]
+返回所有的区域选择器
+
+addZone (config: Partial<Box3ZoneConfig>) : Box3Zone
+创建区域选择器
+config: Box3ZoneConfig 区域选择器配置参数
+
+removeZone (trigger: Box3Zone) : void
+移除区域选择器
+trigger: Box3Zone 指定区域选择器
+
+onInteract / nextInteract () : Box3EventChannel<Box3InteractEvent> / Box3EventFuture<Box3InteractEvent>
+当玩家与实体互动(或未来)触发
+
+
+sound (spec: {sample: string;position?: Box3Vector3;radius?: number;gain?: number;pitch?: number;} | string) : void
+在指定位置播放声音
+spec: {
+    sample: string 声音文件路径,
+    position?: Box3Vector3 声音播放的位置。可以指定在某个实体身上发出声音,
+    radius?: number 声音范围。默认为 32，即 2 格方块距离,
+    gain?: number 音量增益。正常为 1，数值越大，声音越,
+    pitch?: number 音高增益。正常为 1，大于 1，声音播放越快,
+} | string
+Example: 
+```
+// 在指定的位置播放 'airhorn' 声音
+world.sound({
+    sample: 'audio/airhorn.mp3',
+    position: new Box3Vector3(64, 10, 64),
+    radius: 64  // 只有距离位置64半径的玩家能听见。(1个方块的距离是16)
+})
+```
+
+
+^projectName: string
+当前项目名称
+
+currentTick: number
+当前世界的时刻
+
+lightMode: 'natural' | 'manual';
+世界光照模式
+
+sunPhase: number;
+太阳运行阶段，按照`timeOfDay = (sunPhase + sunFrequency * tick) % 1`公式计算
+
+sunFrequency: number;
+太阳在天空中移动的频率。 数值越高=太阳运动越快
+
+lunarPhase: number;
+月亮的相位。 必须在0和1之间
+
+sunDirection: Box3Vector3;
+太阳的方向（仅在环境光模式为'手动'时使用）
+
+sunLight: Box3RGBColor;
+太阳的光照度（仅在环境光模式为'手动'时使用）
+
+skyLeftLight: Box3RGBColor;
+skyRightLight: Box3RGBColor;
+skyBottomLight: Box3RGBColor;
+skyTopLight: Box3RGBColor;
+skyFrontLight: Box3RGBColor;
+skyBackLight: Box3RGBColor;
+天空光照在(-x,+x,-y,+y,-z,+z)方向上的值，（仅在环境光模式为'手动'时使用）
+
+
+fogColor: Box3RGBColor;
+雾颜色
+
+fogStartDistance: number;
+雾起始距离
+
+fogHeightOffset: number;
+雾起始高度
+
+fogHeightFalloff: number;
+雾高度衰减率
+
+fogUniformDensity: number;
+均匀雾的数量（如果>0，就不能看到天幕）
+
+maxFog: number;
+最大雾量
+
+snowDensity: number;
+雪密度
+
+snowSizeLo: number;
+雪最小尺寸
+
+snowSizeHi: number;
+雪最大尺寸
+
+snowFallSpeed: number;
+雪下落速度
+
+snowSpinSpeed: number;
+雪旋转速度
+
+snowColor: Box3RGBAColor;
+雪颜色
+
+snowTexture: string;
+雪纹理
+
+rainDensity: number;
+雨密度
+
+rainDirection: Box3Vector3;
+雨方向
+
+rainSpeed: number;
+雨速度
+
+rainSizeLo: number;
+雨最小尺寸
+
+rainSizeHi: number;
+雨最大尺寸
+
+rainInterference: number;
+雨扰流幅度
+
+rainColor: Box3RGBAColor;
+雨颜色
+
+gravity: number;
+重力
+
+airFriction: number;
+空气阻力
+
+breakVoxelSound: Box3SoundEffect;
+方块破坏声音
+
+placeVoxelSound: Box3SoundEffect;
+方块填充声音
+
+playerJoinSound: Box3SoundEffect;
+玩家进入世界声音
+
+playerLeaveSound: Box3SoundEffect;
+玩家离开世界声音
+
+ambientSound: Box3SoundEffect;
+环境声音
+
+

@@ -18,7 +18,7 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
 
 <icon>枚举成员|enum-member</icon>
 
-<icon>获取器(getter)|getter</icon>
+<icon>获取器(getter)/只读|getter</icon>
 
 <icon>设置器(setter)|setter</icon>
 
@@ -53,6 +53,10 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
 <icon> 枚举 |property parent-enum</icon>
 <icon> 接口 |property parent-interface</icon>
 
+<icon> 标识 |variable private</icon>: 未知或隐藏 API，尚未被官方公布，具体含义与本文档可能存在偏差
+
+<icon> 标识 |variable protected</icon>: 标识受保护或只读的字段
+
 ## 图标库
 
 点击图标可复制其 ID, 右键点击(或触屏长按)可复制 HTML
@@ -61,8 +65,8 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
 <style>
   #icon-container {
     user-select: none;
-    border: 3px solid #ff6e42;
-    box-shadow: 0 0 5px #ff6e42;
+    border: 3px solid #2094f3;
+    box-shadow: 0 0 5px #2094f3;
     border-radius: 5px;
     padding: 8px;
   }
