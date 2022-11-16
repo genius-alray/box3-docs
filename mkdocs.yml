@@ -13,13 +13,16 @@ theme:
     - content.tabs.link
   language: zh
   palette:
-    primary: deep orange
-    accent: amber
+    primary: blue
+    accent: indigo
   custom_dir: overrides
 extra_css:
   - _assets/icons.css
 extra_javascript:
   - _assets/iconsParser.js
+  - _assets/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
   - abbr
@@ -93,21 +96,38 @@ nav:
               - 开始: learn/js/base/index.md
               - Hello, World!: learn/js/base/01-hello-world.md
               - 欢迎玩家: learn/js/base/02-greeting.md
-      - SQL快速入门: learn/sql.md
-      - OOP（面向对象编程）快速入门: learn/oop.md
+      - 大佬の宝典:
+          - SQL快速入门: learn/community-articles/Nomen-sql.md
+          - OOP（面向对象编程）快速入门: learn/community-articles/Nomen-oop.md
+          - 如何优雅地写注释: learn/community-articles/Nomen-comment.md
+          - 快速上手函数: learn/community-articles/Nomen-function.md
   - 实例教程:
       - example/index.md
+      - LightDotCutter 简单PVE游戏:
+          - 起步: example/light-dot-cutter/01-start.md
+          - 生成敌人: example/light-dot-cutter/02-setup-enemy.md
+      #     - 实现玩家攻击: example/light-dot-cutter/03-attack.md
+      #     - 添加敌人和玩家的血量: example/light-dot-cutter/04-health.md
+      #     - 设置奖励: example/light-dot-cutter/05-reward.md
+      #     - 添加特效: example/light-dot-cutter/06-effect.md
+      #     - 重构和扩展: example/light-dot-cutter/07-extra.md
+      #     - 优化: example/light-dot-cutter/08-optimization.md
   - API参考:
       - api/index.md
       - <icon> 图标参考 |namespace</icon>: api/icons.md
       - <icon> 世界 |object</icon>: api/world.md
       - <icon> 方块 |object</icon>: api/voxels.md
-      - <icon> 实体 |class protected</icon>: api/player.md
-      - <icon> 玩家 |class protected</icon>: api/entity.md
+      - <icon> 实体 |class</icon>: api/entity.md
+      - <icon> 玩家 |class</icon>: api/player.md
       - <icon> 事件 |event</icon>:
-          - <icon> Box3TickEvent|event</icon>: api/event/Box3TickEvent.md
+          - <def> Box3TickEvent</def>: api/event/Box3TickEvent.md
       - <icon> 数据库 |enum</icon>: api/database.md
-      - <icon> 数据结构类型 |type</icon>: api/type.md
+      - <icon> 结构类型 |type</icon>:
+          - 基本数据类型:
+              - <def>Number</def>: api/type/base/Number.md
+              - <def>Boolean</def>: api/type/base/Boolean.md
+          - <def>Box3Vector3</def>: api/type/Box3Vector3.md
+
       - <icon> 动画 |signature</icon>: api/animation.md
     #   - "<icon> 世界 |object</icon>": api/world.md
     #   - "<icon> 世界 |object</icon>": api/world.md
