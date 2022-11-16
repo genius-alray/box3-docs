@@ -6,25 +6,25 @@
 
     你将学习到：
 
-    - 事件监听器的基本使用
-    - 模板字符串
-    - 世界消息广播
+    - <icon> 事件监听器 |event parent-class</icon>的基本使用
+    - <icon> 模板字符串 |static</icon>
+    - <icon> 世界消息广播 |method parent-class</icon>
 
 ## 事件监听器
 
-在此之前，我们需要先了解 **事件** 是什么。在代码岛中，程序非常“忙”。你并不能让程序完全暂停下来。因此不能让程序“等待”玩家进入时打招呼。
-如果要实现这个目标，可以换一种思路。告诉程序在玩家进入地图这个 **事件** 发生的时候，应该执行什么事情。而设定的这些事情就是事件监听器。
-Box3 提供了一系列 API 用于设定事件监听器。其中之一便是`world.onPlayerJoin`，意思是当玩家进入时触发。
+在此之前，我们需要先了解 <icon> 事件 |event</icon> 是什么。在代码岛中，程序非常“忙”。你并不能让程序完全暂停下来。因此不能让程序“等待”玩家进入时打招呼。
+如果要实现这个目标，可以换一种思路。告诉程序在玩家进入地图这个 <icon> 事件 |event</icon> 发生的时候，应该执行什么事情。而设定的这些事情就是<icon> 事件监听器 |event parent-class</icon>。
+Box3 提供了一系列 API 用于设定<icon> 事件监听器 |event parent-class</icon>。其中之一便是`world.onPlayerJoin`，意思是当玩家进入时触发。
 !!! note "代码中的命名规范"
 
-    在上面的例子中，`onPlayerJoin`是一个 **方法名** （你可以暂时理解为一种名称）。类似的名称还有`onChat`，`onVoxelContact`等等。
+    在上面的例子中，<icon> onPlayerJoin|event parent-class</icon>是一个 **方法名** （你可以暂时理解为一种名称）。类似的名称还有<icon> onChat|event parent-class</icon>，<icon> onVoxelContact|event parent-class</icon>等等。
     这些名称并不是随意编写的，而是根据一定的规范确定的。在`JavaScript`中，^^一般名称第一个单词首字母小写，此后每一个单词的首字母都大写，单词之间不留空格。^^ [^1]
 
-    另外，这些名称通常是表意的，我们可以根据上面提到的命名方法，将名称拆开。例如`onPlayerJoin`拆开，就是
+    另外，这些名称通常是表意的，我们可以根据上面提到的命名方法，将名称拆开。例如<icon> onPlayerJoin|event parent-class</icon>拆开，就是
     `on`、`player`、`join`。在与事件有关的名称中，`on`通常表示 **当...时** 的意思，`player`表示 **玩家** ，`join`表示 **加入** 。组合起来就是
      **当玩家加入时** 。
 
-    通过类似的方法，可以理解`onChat`意为 **当聊天时** ，`onVoxelContact`意为 **当方块被接触时** 。
+    通过类似的方法，可以理解<icon> onChat|event parent-class</icon>意为 **当聊天时** ，<icon> onVoxelContact|event parent-class</icon>意为 **当方块被接触时** 。
 
 
     [^1]: 这种命名方式被称为“小驼峰命名法”
@@ -64,8 +64,8 @@ entity.player.directMessage("欢迎！");
 
 
     请编写代码完成这个目标，如果不知道从何下手，你可以看看下面两个提示。
-    ??? tip "`onChat` 事件监听器"
-        `onChat` 用于监听聊天消息。当聊天框中出现新的消息时，`onChat`就会被触发，其基本结构如下
+    ??? tip "<icon> onChat|event parent-class</icon> 事件监听器"
+        <icon> onChat|event parent-class</icon> 用于监听聊天消息。当聊天框中出现新的消息时，<icon> onChat|event parent-class</icon>就会被触发，其基本结构如下
         ```javascript linenums="1"
         world.onChat(({ entity, message }) => {
           // 编写你的代码...
@@ -74,7 +74,7 @@ entity.player.directMessage("欢迎！");
         其中，`message`代表发送的消息。
 
 
-    ??? tip "`directMessage`私聊发送消息"
+    ??? tip "<icon> directMessage|method parent-class</icon>私聊发送消息"
         使用`#!javascript entity.player.directMessage(消息内容)`即可向玩家发送消息。
 
 
@@ -99,8 +99,8 @@ entity.player.directMessage("欢迎！");
 
 
     请编写代码完成这个目标，如果不知道从何下手，你可以看看下面两个提示。
-    ??? tip "`onVoxelContact` 事件监听器"
-        `onVoxelContact` 用于检测方块被触碰。当任意方块被实体（例如玩家）触碰时就会被触发，其基本结构如下
+    ??? tip "<icon> onVoxelContact|event parent-class</icon> 事件监听器"
+        <icon> onVoxelContact|event parent-class</icon> 用于检测方块被触碰。当任意方块被实体（例如玩家）触碰时就会被触发，其基本结构如下
         ```javascript linenums="1"
         world.onVoxelContact(({ entity, x, y, z }) => {
           // 编写你的代码...
@@ -109,7 +109,7 @@ entity.player.directMessage("欢迎！");
         其中，`x`,`y`,`z`代表对应方块的坐标。
 
 
-    ??? tip "`voxels.setVoxel`改变方块"
+    ??? tip "<icon> voxels.setVoxel|method parent-class</icon>改变方块"
         使用`#!javascript voxels.setVoxel(x,y,z,方块名称或者ID)`即可更改指定坐标位置的方块，如果第四个参数为`#!javascript "air"`（空气）或者`#!javascript 0`，
         则会破坏指定位置的方块
 
