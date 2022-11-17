@@ -97,6 +97,6 @@ console.log("hello, world");
     ```
     </div>
 
-下一章节我们将学习<icon> 事件监听 |event parent-class</icon>，并编写一个简单的程序，让世界向玩家打招呼。
+下一章节我们将学习<listener> 事件监听</listener>，并编写一个简单的程序，让世界向玩家打招呼。
 
-[^1]: 严格来说应该叫做 <icon> 方法 |method parent-class</icon>
+[^1]: 严格来说应该叫做 <method> 方法 </method>

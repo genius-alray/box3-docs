@@ -30,7 +30,7 @@
 实体上粒子特效相关的属性都以`particle`开头。
 有关粒子特效属性的详细信息，请看 API 文档中的[实体的粒子特效](../../api/entity.md)。
 
-下面这段代码可以设置 <icon> 实体 entity |object</icon> 的部分粒子特效，使其产生白烟特效。
+下面这段代码可以设置 <object>实体 entity</object> 的部分粒子特效，使其产生白烟特效。
 
 ```javascript title="白烟特效示例"
 entity.particleLimit = 5000; //粒子上限为5000
@@ -43,9 +43,9 @@ entity.particleVelocitySpread.set(3, 3, 3); //设置粒子随机速度，使其�
 <div class="result" markdown>
 ![白烟特效演示](images/3.gif)
 </div>
-!!! tip "关于 <icon> particleVelocitySpread |property parent-class</icon> 的随机范围"
+!!! tip "关于 <property>particleVelocitySpread</property> 的随机范围"
 
-    此属性是一个三维向量（`dx,dy,dz`），与 <icon> particleVelocity |property parent-class</icon> 配合使用。所产生的随机速度范围是 `X±dx, Y±dy, Z±dz`。
+    此属性是一个三维向量（`dx,dy,dz`），与 <property>particleVelocity</property> 配合使用。所产生的随机速度范围是 `X±dx, Y±dy, Z±dz`。
 
 ## 粒子属性过渡
 
@@ -95,6 +95,6 @@ entity.particleColor = [
 
 !!! bug "数量上限 属性并不完全起作用"
 
-    虽然将数量上限设置为0时不会产生粒子，但是设置为任何大于零的数，粒子都可以不断产生[^2]，且将 <icon> particleLimit |property parent-class</icon> 修改改为0会停止粒子的生成，已生成的粒子不会被删除。
+    虽然将数量上限设置为0时不会产生粒子，但是设置为任何大于零的数，粒子都可以不断产生[^2]，且将 <property>particleLimit</property> 修改改为0会停止粒子的生成，已生成的粒子不会被删除。
 
 [^2]: 直到超过渲染最大值时，最先产生的粒子会被强制删除。这里的“最大值”是一个不可见的画质设定，默认值为`65536`。

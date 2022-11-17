@@ -11,9 +11,9 @@
 
 程序将任务分解为一段一段的过程，然后用函数以及方法完成
 
-例如，如果华强要买个瓜，首先函数会执行 <icon> 骑上电动车 |callable</icon> ，然后执行 <icon> 前往瓜摊 |callable</icon> ，然后执行 ~~<icon> 议价 |callable</icon>~~ <icon> 找茬 |callable</icon>
+例如，如果华强要买个瓜，首先函数会执行 <method>骑上电动车</method> ，然后执行 <method>前往瓜摊</method> ，然后执行 ~~<method>议价</method>~~ <method>找茬</method>
 
-> Alan: 缺少灵魂，还有一步是<icon> 嘎了老板 |callable</icon>
+> Alan: 缺少灵魂，还有一步是<method>嘎了老板 </method>
 
 ```mermaid
 flowchart TD
@@ -38,7 +38,7 @@ flowchart TD
 
 程序侧重对象，即 **谁来做** ，将任务抽象为对象，使用对象来完成任务
 
-例如，如果需要买个瓜，抽象一个名字叫 <icon> 华强 |class</icon> 的类，执行方法 <icon> 买瓜 |method parent-class</icon>
+例如，如果需要买个瓜，抽象一个名字叫 <class>华强</class> 的类，执行方法 <method>买瓜</method>
 
 ```mermaid
 classDiagram
@@ -127,14 +127,14 @@ classDiagram
 举个栗子：
 
 一个有正常计算机基础的人是能使用键盘的（无特殊前提）  
-那么现在我们有一个<icon> 类 |class</icon>是用于构建一个<icon> 人 |object</icon>的，而构建后的这个对象拥有<icon> 打字 |method parent-class</icon>这个能力（方法）
+那么现在我们有一个<class>类</class>是用于构建一个<object>人</object>的，而构建后的这个对象拥有<method>打字</method>这个能力（方法）
 假设一堆人里面有一个代码师和建造师，那么这两种角色都是人，都能打字，
-也就是说，他们能使用键盘，继承了一个正常人都有的能力（<icon> 继承方法 |function parent-class inherited</icon>），但是有不同的职业  
+也就是说，他们能使用键盘，继承了一个正常人都有的能力（<icon name="function parent-class inherited">继承方法</icon>），但是有不同的职业  
 这个时候呢，一个代码师的键盘习惯肯定是 `asdfhjkl`，而建筑师的键盘习惯是 `asdw`，那么这就实现了多态  
 能够根据类的不同做出一定的改变，这很好理解吧
 
 这个时候，所有职业都有一个能力就是做地图，然后所有人都有一个属性那就是贡献数量  
-贡献地图的数量是不能随意改变的，不能被外部调用者随意篡改，那么我们就将这个<icon> 字段（属性） |property parent-class protected inherited</icon>保护起来，不允许非成员访问  
+贡献地图的数量是不能随意改变的，不能被外部调用者随意篡改，那么我们就将这个<icon name="property parent-class protected inherited">字段（属性</icon>保护起来，不允许非成员访问  
 然后我们再定义一个方法：做地图，调用这个方法能增加贡献数量，但是会收到这个方法的限制  
 这就算是封装
 
@@ -181,7 +181,7 @@ classDiagram
 
 以及`#!javascript constructor()`来定义构造函数
 
-有关 <icon> 类(Class) |class</icon> 的教程详见网络教程，此处不多赘述
+有关 <class>类</class> 的教程详见网络教程，此处不多赘述
 
 对象拥有属性与方法，以及能够继承一些属性
 

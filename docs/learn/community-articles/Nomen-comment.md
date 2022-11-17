@@ -96,7 +96,7 @@ function(){...}
 
 ### 函数注释
 
-让我们回到刚刚的代码，其意思是：将传入的所有参数执行 <icon>Array.prototype.reduce|method parent-class</icon>这个方法
+让我们回到刚刚的代码，其意思是：将传入的所有参数执行 <method>Array.prototype.reduce</method>这个方法
 
 这个时候，我们应该写清楚这个函数的 **接受的参数** ， **用于什么方面的** ，以及 **返回值**
 

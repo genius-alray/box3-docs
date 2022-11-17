@@ -34,23 +34,23 @@
 
 **在 JavaScript 中，每个函数其实都是一个 Function 对象**
 
-别急，Function 对象是什么？简单来说，对象好比一个人，这个人有自己的名字（ <icon>属性|property</icon> ）以及能够做的事情（ <icon>方法|method</icon> ）
+别急，Function 对象是什么？简单来说，对象好比一个人，这个人有自己的名字（ <property>属性</property> ）以及能够做的事情（ <method>方法</method> ）
 
-那 Function 函数就是一个拥有自己<icon>方法|method</icon>与<icon>属性|property</icon>的东西了
+那 Function 函数就是一个拥有自己<method>方法</method>与<property>属性</property>的东西了
 
 等等，方法？是的，一个对象的方法一般都是用函数构造的(闭环了属于是)，我们用函数来包装这个对象的方法以便调用
 
-> 调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数<icon>参数|property</icon>名叫作<icon>形参|property parent-interface</icon>。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应<icon>形参|property parent-interface</icon>的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应<icon>形参|property parent-interface</icon>会和该实参指向同一个对象。假如函数在内部改变了对应<icon>形参|property parent-interface</icon>的值，返回后，实参指向的对象的值也会改变
+> 调用函数时，传递给函数的值被称为函数的实参（值传递），对应位置的函数<property>参数</property>名叫作<arg>形参</arg>。如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应<arg>形参</arg>的值，返回后，该实参变量的值也不会改变。如果实参是一个对象引用，则对应<arg>形参</arg>会和该实参指向同一个对象。假如函数在内部改变了对应<arg>形参</arg>的值，返回后，实参指向的对象的值也会改变
 >
 > ——来自 MDN 技术社区的注释
 
 “传递给函数的值被称为函数的实参（值传递）”，这句话的意思是，在使用函数的时候，你给函数括号内传入的任何东西都是实实在在的（既有实际定义与类型）
 
-“对应位置的函数<icon>参数|property</icon>名叫作<icon>形参|property parent-interface</icon>”，也就是说，你函数本身定义的时候要求的<icon>参数|property</icon>都是<icon>形参|property parent-interface</icon>-顾名思义，只有外形，也是相当于一个不明类型的<icon>参数|property</icon>
+“对应位置的函数<property>参数</property>名叫作<arg>形参</arg>”，也就是说，你函数本身定义的时候要求的<property>参数</property>都是<arg>形参</arg>-顾名思义，只有外形，也是相当于一个不明类型的<property>参数</property>
 
-> 实参：实际存在的<icon>参数|property</icon>，有明确的类型，一般出现在函数调用的位置
+> 实参：实际存在的<property>参数</property>，有明确的类型，一般出现在函数调用的位置
 >
-> <icon>形参|property parent-interface</icon>：形式上存在的<icon>参数|property</icon>，用于接收传入的<icon>参数|property</icon>，不是实际存在的，浏览器也不会为这玩意分配额外空间
+> <arg>形参</arg>：形式上存在的<property>参数</property>，用于接收传入的<property>参数</property>，不是实际存在的，浏览器也不会为这玩意分配额外空间
 
 #### 关键字函数
 
@@ -82,10 +82,10 @@ myFunc(mycar); //这个时候，我们调用了这个函数，并且传入了这
 console.log(mycar.brand); //属性修改成功，将修改后的对象输出
 ```
 
-这时候再让我们分析下一句话，**如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应<icon>形参|property parent-interface</icon>的值，返回后，该实参变量的值也不会改变**
+这时候再让我们分析下一句话，**如果实参是一个包含原始值 (数字，字符串，布尔值) 的变量，则就算函数在内部改变了对应<arg>形参</arg>的值，返回后，该实参变量的值也不会改变**
 
-或许同学们觉得很绕，但是我们分一下点，就知道它的意思是：如果传入给函数的<icon>参数|property</icon>为数字 Number,字符串 String,布尔 Boolean
-，那么函数体内对于这个<icon>参数|property</icon>的任何修改都不会影响到外边的本体，而对象 Object 则会被修改
+或许同学们觉得很绕，但是我们分一下点，就知道它的意思是：如果传入给函数的<property>参数</property>为数字 Number,字符串 String,布尔 Boolean
+，那么函数体内对于这个<property>参数</property>的任何修改都不会影响到外边的本体，而对象 Object 则会被修改
 
 就相当于函数对于基元类型的数据只有读取权，没有修改权，但是对象是基元组合，所以能够直接修改
 
@@ -97,7 +97,7 @@ console.log(mycar.brand); //属性修改成功，将修改后的对象输出
 
 ```javascript
 //关键字函数使用关键字function声明
-function myFunction(coin){//提供一个coin<icon>形参|property parent-interface</icon>
+function myFunction(coin){//提供一个coin<arg>形参</arg>
    return coin+1;
    //返回coin+1的值
 }
@@ -154,31 +154,31 @@ function func(a){}
 
 (a)=>{}
 
-这其中的(a)就是用于接收<icon>参数|property</icon>的<icon>形参|property parent-interface</icon>，箭头指向其函数体
+这其中的(a)就是用于接收<property>参数</property>的<arg>形参</arg>，箭头指向其函数体
 
 ```
 
-那么到现在为止，箭头函数已经很分明了，与普通函数结构基本相似： <icon>参数|property</icon>，箭头，函数体
+那么到现在为止，箭头函数已经很分明了，与普通函数结构基本相似： <property>参数</property>，箭头，函数体
 !!! quote ""
 
       (param1, param2, …, paramN) => { statements }
       (param1, param2, …, paramN) => expression
       相当于：(param1, param2, …, paramN) =>{ return expression; }
 
-      当只有一个<icon>参数|property</icon>时，圆括号是可选的：
+      当只有一个<property>参数</property>时，圆括号是可选的：
       (singleParam) => { statements }
       singleParam => { statements }
 
-      没有<icon>参数|property</icon>的函数应该写成一对圆括号。
+      没有<property>参数</property>的函数应该写成一对圆括号。
       () => { statements }
 
       ——来自 MDN 社区的示例
 
 敲黑板啦，这个结构可以简单描述为：
 
-- 一个<icon>参数|property</icon>，不用括号
-- 多个<icon>参数|property</icon>，加上括号
-- 没有<icon>参数|property</icon>，保留括号
+- 一个<property>参数</property>，不用括号
+- 多个<property>参数</property>，加上括号
+- 没有<property>参数</property>，保留括号
 - 一条语句，不用装块
 - 多条语句，要大括号
 - 最后检查，有无箭头
@@ -195,13 +195,13 @@ function func(a){}
 
 怎么样，你看到箭头函数了吗
 
-### <icon>方法|method parent-class</icon>
+### <method>方法</method>
 
 在对象中，一个对象可以做到的事情或者功能被成为方法，方法其实是一个函数
 
 !!! quote ""
 
-      在物件导向程式设计中，方法（英语：Method；德语：Methode； 法语：Méthode）指的是类别（所谓的类别方法、静态方法或工厂方法）、或者是物件（所谓的实体方法）两者其中之一的一种子程式。如同程序化程式语言的程序，一个方法通常以一系列的语句所组成，并以之完成一个动作。其可以借由输入一组<icon>参数|property</icon>以制订所需的动作，且一部分的方法可能会有输出值（所谓的返回值）。方法的目的是提供一个机制，以存取（对于读和写）物件或类别的私有资料储存区
+      在物件导向程式设计中，方法（英语：Method；德语：Methode； 法语：Méthode）指的是类别（所谓的类别方法、静态方法或工厂方法）、或者是物件（所谓的实体方法）两者其中之一的一种子程式。如同程序化程式语言的程序，一个方法通常以一系列的语句所组成，并以之完成一个动作。其可以借由输入一组<property>参数</property>以制订所需的动作，且一部分的方法可能会有输出值（所谓的返回值）。方法的目的是提供一个机制，以存取（对于读和写）物件或类别的私有资料储存区
 
       来自维基百科 - https://zh.m.wikipedia.org/zh-hans/方法_(電腦科學)
 
@@ -220,7 +220,7 @@ const myObj = {
 
 我们可以使用`myObj.addCoin();`来调用
 
-也就是说，我们能够通过对象属性的访问来访问方法，然后使用括号调用方法，并且能传入<icon>参数|property</icon>
+也就是说，我们能够通过对象属性的访问来访问方法，然后使用括号调用方法，并且能传入<property>参数</property>
 
 同时这个函数内有一个 this，指向了其 **父级块** ， **myObj** ，我们将会在以后讲到这一点
 
@@ -316,7 +316,7 @@ resolve('foo');
 
 是的，这会让函数内部停下来等待这段语句执行完毕
 
-不过 `async function` 有个特性，就是它不会在调用它的环境中自动堵塞，所以使用其返回值会返回一个 <icon>Promise Object|object</icon>
+不过 `async function` 有个特性，就是它不会在调用它的环境中自动堵塞，所以使用其返回值会返回一个 <object>Promise</object>
 
 很好解决，我们使用 `then` 就可以了，详见 `Promise` 或 [MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 then 是 Promise 的一个方法，其会在 Promise 接收后返回并且执行回调函数
@@ -477,10 +477,10 @@ result(); // 999
 
 > 文章仅供参考，最终更新日期为 4/29/2022，不代表往后 js 标准，请参阅最新的 JavaScript 官方文档
 
-`apply()` 方法调用一个具有给定 this 值的函数，以及以一个数组（或一个类数组对象）的形式提供的<icon>参数|property</icon>。
+`apply()` 方法调用一个具有给定 this 值的函数，以及以一个数组（或一个类数组对象）的形式提供的<property>参数</property>。
 
-`bind()` 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个<icon>参数|property</icon>，而其余<icon>参数|property</icon>将作为新函数的<icon>参数|property</icon>，供调用时使用。
+`bind()` 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个<property>参数</property>，而其余<property>参数</property>将作为新函数的<property>参数</property>，供调用时使用。
 
-`call()` 方法使用一个指定的 this 值和单独给出的一个或多个<icon>参数|property</icon>来调用一个函数。
+`call()` 方法使用一个指定的 this 值和单独给出的一个或多个<property>参数</property>来调用一个函数。
 
 `toString()` 方法返回一个表示当前函数源代码的字符串。

@@ -4,5 +4,6 @@
 
     如果你愿意为此贡献一份力量，请[加入我们](/about)
 
-    [查阅官方文档](https://docs.box3.codemao.cn/box3database.html){.md-button}
+    > 官方文档中也没有此内容，我们正在努力编写。
+
     [返回](javascript:history.back()){.md-button}
