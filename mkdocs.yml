@@ -122,8 +122,6 @@ nav:
       - <icon> 事件 |event</icon>:
           - <def> Box3TickEvent</def>: api/event/Box3TickEvent.md
       - <icon> 数据库 |enum</icon>: api/database.md
-      - Box3通用属性:
-          - <def>Box3Vector3</def>: api/box3-general-properties/box3vector3/
       - <icon> 结构类型 |type</icon>:
           - 基本数据类型:
               - <def>Number</def>: api/type/base/Number.md
