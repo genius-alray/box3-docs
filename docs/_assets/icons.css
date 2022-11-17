@@ -11,6 +11,9 @@ def {
   transition-duration: 0.25s;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
   font-weight: bold;
 }
 .kind-icon:hover {

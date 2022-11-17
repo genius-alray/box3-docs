@@ -81,7 +81,9 @@ function parse() {
     let iconId = "property";
     if (Object.keys(defsMap).includes(def)) {
       iconId = defsMap[def][0];
-      href = "/api/" + (defsMap[def][1] || "_missing");
+      href =
+        (location.href.includes("github.io") ? "/box3-docs/api/" : "/api/") +
+        (defsMap[def][1] || "_missing");
     } else {
       console.error("Unknown define tag", def);
       debugger;
