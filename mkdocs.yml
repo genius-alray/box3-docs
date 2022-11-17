@@ -103,8 +103,6 @@ nav:
       - learn/index.md
       - 粒子特效:
           - learn/particle/index.md
-      - Box3通用属性:
-          - learn/box3-general-properties/Box3Vector3.md.md
       - JavaScript:
           - learn/js/index.md
           - 基础教程:

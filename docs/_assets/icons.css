@@ -10,6 +10,8 @@ def {
   text-indent: -20px; */
   transition-duration: 0.25s;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   font-weight: bold;
 }
