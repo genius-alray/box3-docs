@@ -53,8 +53,8 @@ for (let x = 0; x < 100; x++) createEnemy();
 ![](./images/4.png)
 
 看起来不错，但是如果你尝试推这些敌人，它们很容易挤在一起， ~~敌人就无法群殴玩家了~~ 这不太好。
-所以我们可以利用碰撞过滤，使敌人之间不能相互碰撞，于是我们需要修改一下生成敌人的代码，用<icon> entity.addTag |method parent-class</icon>给敌人实体添加标签，
-然后用<icon> world.addCollisionFilter |method parent-class</icon>来添加碰撞过滤。
+所以我们可以利用碰撞过滤，使敌人之间不能相互碰撞，于是我们需要修改一下生成敌人的代码，用<method>entity.addTag</method>给敌人实体添加标签，
+然后用<method>world.addCollisionFilter</method>来添加碰撞过滤。
 
 ```javascript hl_lines="2 21-22"
 const scale = Math.random() + 5 / 64;

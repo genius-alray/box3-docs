@@ -5,20 +5,22 @@ def {
 
 .kind-icon {
   position: relative;
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   /* padding-left: 20px;
   text-indent: -20px; */
-  transition-duration: 0.1s;
+  transition-duration: 0.25s;
   cursor: pointer;
   user-select: none;
   font-weight: bold;
 }
 .kind-icon:hover {
-  border-color: rgba(32, 148, 243, 0.3);
+  border-color: rgba(32, 148, 243, 0.5);
 }
 .kind-icon:active {
   background-color: rgba(32, 148, 243, 0.3);
-  border-color: rgba(32, 148, 243, 0.5);
+  border-color: #2094f3;
+  /* box-shadow: 0 1px 3px #2094f3; */
+  transition-duration: 0s;
 }
 .kind-icon:before {
   content: "";

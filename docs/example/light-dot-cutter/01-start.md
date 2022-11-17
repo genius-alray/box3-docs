@@ -20,5 +20,5 @@
 
 ??? question "为什么需要这个白色模型"
 
-    因为敌人在此游戏中是彩色光点，因此这个白色的模型是基础模型，通过改变其<icon> meshColor |property parent-class</icon>属性可使其改变颜色，
-    然后通过改变<icon> meshEmissive |property parent-class</icon>使其发光。
+    因为敌人在此游戏中是彩色光点，因此这个白色的模型是基础模型，通过改变其<property>meshColor</property>属性可使其改变颜色，
+    然后通过改变<property>meshEmissive</property>使其发光。

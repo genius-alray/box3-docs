@@ -8,3 +8,15 @@ Tick 本意为钟表的滴答声，在这里被当作一种时间周期或时间
 开发过程中，应尽量优化代码，使 tick 间隔时间尽可能短且稳定，这样玩家就会感觉地图比较流畅。
 
 ## 事件参数
+
+<property>elapsedTimeMS</property> : <def>number</def>
+: 两次`tick`中间经过的时间
+
+<property>prevTick</property> : <def>number</def>
+: 上一个正常处理的`tick`
+
+<property>skip</property> : <def>boolean</def>
+: 如果为<bool>true</bool>则说明因为卡顿而跳过了`tick`
+
+<property>tick</property> : <def>number</def>
+: 当前`tick`的编号

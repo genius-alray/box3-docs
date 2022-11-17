@@ -11,13 +11,28 @@ theme:
     - navigation.tabs
     - navigation.expand
     - content.tabs.link
+    - search.suggest
+    - search.highlight
   language: zh
   palette:
-    primary: blue
-    accent: indigo
+    # primary: blue
+    # accent: indigo
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 亮色模式
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: 暗色模式
   custom_dir: overrides
 extra_css:
   - _assets/icons.css
+  - _assets/global.css
+
 extra_javascript:
   - _assets/iconsParser.js
   - _assets/mathjax.js
@@ -64,7 +79,8 @@ markdown_extensions:
   - pymdownx.tilde
   - tables
 plugins:
-  - search
+  - search:
+      lang: en
   - glightbox:
       touchNavigation: true
       loop: false
@@ -114,25 +130,42 @@ nav:
       #     - 优化: example/light-dot-cutter/08-optimization.md
   - API参考:
       - api/index.md
-      - <icon> 图标参考 |namespace</icon>: api/icons.md
-      - <icon> 世界 |object</icon>: api/world.md
-      - <icon> 方块 |object</icon>: api/voxels.md
-      - <icon> 实体 |class</icon>: api/entity.md
-      - <icon> 玩家 |class</icon>: api/player.md
-      - <icon> 事件 |event</icon>:
-          - <def> Box3TickEvent</def>: api/event/Box3TickEvent.md
-      - <icon> 数据库 |enum</icon>: api/database.md
-      - <icon> 结构类型 |type</icon>:
-          - 基本数据类型:
+      - <icon name='namespace'>图标参考</icon>: api/icons.md
+      - <icon name='object'>世界</icon>: api/world.md
+      - <icon name='object'>方块</icon>: api/voxels.md
+      - <icon name='class'>实体</icon>: api/entity.md
+      - <icon name='class'>玩家</icon>: api/player.md
+      - <icon name='event'>事件</icon>:
+          - <def>Box3TickEvent</def>: api/event/Box3TickEvent.md
+          - <def>Box3RespawnEvent</def>: api/event/Box3RespawnEvent.md
+          - <def>Box3DamageEvent</def>: api/event/Box3DamageEvent.md
+          - <def>Box3DieEvent</def>: api/event/Box3DieEvent.md
+          - <def>Box3PlayerEntityEvent</def>: api/event/Box3PlayerEntityEvent.md
+          - <def>Box3EntityEvent</def>: api/event/Box3EntityEvent.md
+
+      - <icon name='enum'>数据库</icon>: api/database.md
+      - <icon name='type'>结构类型</icon>:
+          - <icon name='namespace'>基本数据类型</icon>:
               - <def>Number</def>: api/type/base/Number.md
               - <def>Boolean</def>: api/type/base/Boolean.md
+              - <def>Partial</def>: api/type/base/Partial.md
+              - <def>URL</def>: api/type/base/URL.md
           - <def>Box3Vector3</def>: api/type/Box3Vector3.md
+          - <def>Box3EventChannel</def>: api/type/Box3EventChannel.md
+          - <def>Box3EventFuture</def>: api/type/Box3EventFuture.md
+          - <def>Box3EntityConfig</def>: api/type/Box3EntityConfig.md
+          - <def>Box3SelectorString</def>: api/type/Box3SelectorString.md
+          - <def>Box3RaycastOptions</def>: api/type/Box3RaycastOptions.md
+          - <def>Box3Bounds3</def>: api/type/Box3Bounds3.md
+          - <def>Box3RGBColor</def>: api/type/Box3RGBColor.md
+          - <def>Box3SoundEffect</def>: api/type/Box3SoundEffect.md
 
-      - <icon> 动画 |signature</icon>: api/animation.md
-    #   - "<icon> 世界 |object</icon>": api/world.md
-    #   - "<icon> 世界 |object</icon>": api/world.md
-    #   - "<icon> 世界 |object</icon>": api/world.md
-    #   - "<icon> 世界 |object</icon>": api/world.md
+      - <icon name='signature'>动画</icon>:
+          - <def>Box3WorldKeyframe</def>: api/type/Box3WorldKeyframe.md
+          - <def>Box3AnimationPlaybackConfig</def>: api/type/Box3AnimationPlaybackConfig.md
+          - <def>Box3Animation</def>: api/type/Box3Animation.md
+          - <def>Box3EntityKeyframe</def>: api/type/Box3EntityKeyframe.md
+          - <def>Box3PlayerKeyframe</def>: api/type/Box3PlayerKeyframe.md
 # - Getting started:
 #   - Installation: getting-started.md
 #   - Creating your site: creating-your-site.md

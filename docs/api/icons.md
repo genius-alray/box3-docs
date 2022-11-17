@@ -6,56 +6,56 @@
 
 API 文档中会出现一些表示类型的图标，下面是常用图标的含义
 
-<icon>对象|object</icon>
+<icon name="object">对象</icon>
 
-<icon>类|class</icon>
+<icon name="class">类</icon>
 
-<icon>变量/属性|variable</icon>
+<icon name="variable">变量/属性</icon>
 
-<icon>接口|interface</icon>
+<icon name="interface">接口</icon>
 
-<icon>枚举|enum</icon>
+<icon name="enum">枚举</icon>
 
-<icon>枚举成员|enum-member</icon>
+<icon name="enum-member">枚举成员</icon>
 
-<icon>获取器(getter)/只读|getter</icon>
+<icon name="getter">获取器(getter)/只读</icon>
 
-<icon>设置器(setter)|setter</icon>
+<icon name="setter">设置器(setter)</icon>
 
-<icon>访问器(getter + setter = accessor)|accessor</icon>
+<icon name="accessor">访问器(getter + setter = accessor)</icon>
 
-<icon>模块/命名空间|module</icon>
+<icon name="module">模块/命名空间</icon>
 
-<icon>构造器|constructor</icon>
+<icon name="constructor">构造器</icon>
 
-<icon>索引|index</icon>
+<icon name="index">索引</icon>
 
-<icon> 类型 |type</icon>
+<icon name="type"> 类型 </icon>
 
-<icon> 事件 |event</icon>
+<icon name="event"> 事件 </icon>
 
-<icon> 静态 |static</icon>
+<icon name="static"> 静态 </icon>
 
-<icon> 静态方法/函数 |static function</icon>
+<icon name="static function"> 静态方法/函数 </icon>
 
-<icon> 签名 |signature</icon>
+<icon name="signature"> 签名 </icon>
 
 某些图标因为所处上下文不同，其形式会发生改变，例如
-<icon> 普通 |variable</icon>、
-<icon> 受保护的 |variable protected</icon>、
-<icon> 私有 |variable private</icon>、
-<icon> 继承的 |property parent-class inherited</icon>
-<icon> 带泛型的 |class generic</icon>
+<icon name="variable"> 普通 </icon>、
+<icon name="variable protected"> 受保护的 </icon>、
+<icon name="variable private"> 私有 </icon>、
+<icon name="property parent-class inherited"> 继承的 </icon>
+<icon name="class generic"> 带泛型的 </icon>
 。
 同时，根据其父级的类型，颜色也会发生改变，比如
-<icon> 普通 |property</icon>
-<icon> 类 |property parent-class</icon>
-<icon> 枚举 |property parent-enum</icon>
-<icon> 接口 |property parent-interface</icon>
+<icon name="property"> 普通 </icon>
+<icon name="property parent-class"> 类 </icon>
+<icon name="property parent-enum"> 枚举 </icon>
+<icon name="property parent-interface"> 接口 </icon>
 
-<icon> 标识 |variable private</icon>: 未知或隐藏 API，尚未被官方公布，具体含义与本文档可能存在偏差
+<icon name="variable private"> 标识 </icon>: 未知或隐藏 API，尚未被官方公布，具体含义与本文档可能存在偏差
 
-<icon> 标识 |variable protected</icon>: 标识受保护或只读的字段
+<icon name="variable protected"> 标识 </icon>: 标识受保护或只读的字段
 
 ## 图标库
 
@@ -72,6 +72,7 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
   }
   .icon-item {
     padding: 0 8px;
+    border: 1px solid transparent;
   }
 </style>
 <script>
@@ -88,7 +89,7 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
         .filter((s) => !s.includes("kind-icon"))
         .join(" ");
       el.addEventListener("click", (e) =>alert$.next("已复制图标ID")&navigator.clipboard.writeText(el.innerText));
-      el.addEventListener("contextmenu",e=>alert$.next("已复制图标HTML代码")&e.preventDefault() & navigator.clipboard.writeText(`<icon> ... |${el.innerText}</icon>`))
+      el.addEventListener("contextmenu",e=>alert$.next("已复制图标HTML代码")&e.preventDefault() & navigator.clipboard.writeText(`<icon name="${el.innerText}">IconLabel</icon>`))
       document.querySelector("#icon-container").appendChild(el);
     }
   }
