@@ -29,9 +29,9 @@ new Box3Vector3(19, 19, 810)
 
     在这篇文档里，所有的\[参数和返回值\]的内容全部是`typescript`代码（~~懒得做表格~~），对不认识`typescript`的人来说难以理解  
     不过，这篇文档的`typescript`代码还是非常容易理解的  
-    我们以`set`函数为例：
+    我们以<method>set</method>函数为例：
     ```typescript
-    set(x: number, y: number, z: number): Box3Vector3
+    set(x: number, y: number, z: number): <def>Box3Vector3</def>
     ```
     其中，括号前面的是函数名，括号里面的内容是参数（英文逗号分隔），括号后面的是返回类型  
     例如，“set”是函数名，“x: number”是参数，Box3Vector3是返回类型  
@@ -46,47 +46,35 @@ new Box3Vector3(19, 19, 810)
 
     | 参数名 | 类型 |
     | :- | :- |
-    | x | `number`类型 |
-    | y | `number`类型 |
-    | z | `number`类型 |
+    | x | <def>Number</def> |
+    | y | <def>Number</def> |
+    | z | <def>Number</def> |
 
     输出：
     <def>Box3Vector3</def>类型
 
     （一个小知识：官方文档的类型也可以这么读）
 
-<method>set</method>
+<method>set</method>(x: <def>Number</def>, y: <def>Number</def>, z: <def>Number</def>) : <def>Box3Vector3</def>
 
 设置<def>Box3Vector3</def>的值  
-#### 参数和返回值
-```typescript
-set(x: number, y: number, z: number): Box3Vector3
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(0, 0, 0).set(5, 5, 0) //<~ { x: 5, y: 5, z: 0 }
     new Box3Vector3(1, 2, 3).set(4, 5, 6) //<~ { x: 4, y: 5, z: 6 }
     new Box3Vector3().set(5, 5, 5) //<~ { x: 5, y: 5, z: 5 }
     ```
-<method>copy</method>
+<method>copy</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 把另一个<def>Box3Vector3</def>的值复制到这个<def>Box3Vector3</def>中  
-#### 参数和返回值
-```typescript
-copy(v: Box3Vector3): Box3Vector3
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(0, 0, 0).copy(new Box3Vector3(5, 0, 0)) //<~ { x: 5, y: 0, z: 0 }
     new Box3Vector3().copy(new Box3Vector3(1, 0, 0)) //<~ { x: 1, y: 0, z: 0 }
     ```
-<method>add</method>
+<method>add</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>加上另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-add(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法不会改变原来的<def>Box3Vector3</def>
@@ -95,13 +83,9 @@ add(v: Box3Vector3): Box3Vector3
     ```javascript
     new Box3Vector3(1, 1, 1).add(new Box3Vector3(5, 5, 5)) //<~ { x: 6, y: 6, z: 6 }
     ```
-<method>sub</method>
+<method>sub</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>减去另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-sub(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法不会改变原来的<def>Box3Vector3</def>
@@ -110,13 +94,9 @@ sub(v: Box3Vector3): Box3Vector3
     ```javascript
     new Box3Vector3(6, 6, 6).sub(new Box3Vector3(1, 1, 1)) //<~ { x: 5, y: 5, z: 5 }
     ```
-<method>mul</method>
+<method>mul</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>乘以另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-mul(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法不会改变原来的<def>Box3Vector3</def>
@@ -125,13 +105,9 @@ mul(v: Box3Vector3): Box3Vector3
     ```javascript
     new Box3Vector3(5, 5, 5).mul(new Box3Vector3(5, 5, 5)) //<~ { x: 25, y: 25, z: 25 }
     ```
-<method>div</method>
+<method>div</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>除以另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-div(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法不会改变原来的<def>Box3Vector3</def>
@@ -141,7 +117,7 @@ div(v: Box3Vector3): Box3Vector3
     new Box3Vector3(25, 25, 25).mul(new Box3Vector3(5, 5, 5)) //<~ { x: 5, y: 5, z: 5 }
     ```
 !!! warning "上面四个函数的易错点"  
-    上面四个函数要注意，填写的不是三个`number`类型的参数，而是一个<def>Box3Vector3</def>类型的参数  
+    上面四个函数要注意，填写的不是三个<def>Number</def>类型的参数，而是一个<def>Box3Vector3</def>类型的参数  
     例如，应该这样写：
     ```javascript
     new Box3Vector3(6, 6, 6).add(new Box3Vector3(1, 1, 1))
@@ -153,79 +129,51 @@ div(v: Box3Vector3): Box3Vector3
     下面四个函数同理
 
 !!! info "下面四个函数与上面四个函数相似"
-<method>addEq</method>
+<method>addEq</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>加上另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-addEq(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法会改变原来的<def>Box3Vector3</def>
 
-<method>subEq</method>
+<method>subEq</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>减去另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-subEq(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法会改变原来的<def>Box3Vector3</def>
 
-<method>mulEq</method>
+<method>mulEq</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>乘以另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-mulEq(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法会改变原来的<def>Box3Vector3</def>
 
-<method>divEq</method>
+<method>divEq</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 将一个<def>Box3Vector3</def>除以另一个<def>Box3Vector3</def>，返回结果  
-#### 参数和返回值
-```typescript
-divEq(v: Box3Vector3): Box3Vector3
-```
 !!! warning "警告"
 
     此方法会改变原来的<def>Box3Vector3</def>
 
-<method>dot</method>
+<method>dot</method> (v: <def>Box3Vector3</def>): <def>Number</def>
 
 将这个<def>Box3Vector3</def>与另一个<def>Box3Vector3</def>相乘，返回结果的三个方向的值的和
-#### 参数和返回值
-```typescript
-dot(v: Box3Vector3): number
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(1, 1, 1).dot(new Box3Vector3(5, 5, 5)) //<~ 15
     ```
-<method>cross</method>
+<method>cross</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
-#### 参数和返回值
-```typescript
-cross(v: Box3Vector3): Box3Vector3
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(1, 1, 1).cross(new Box3Vector3(5, 5, 5)) //<~ { x: 0, y: 0, z: 0 }
     new Box3Vector3(1, 1, 1).cross(new Box3Vector3(1, 1, 1)) //<~ { x: 0, y: 0, z: 0 }
     ```
-<method>scale</method>
+<method>scale</method> (n: <def>Number</def>): <def>Box3Vector3</def>
 
 缩放一个<def>Box3Vector3</def>
-#### 参数和返回值
-```typescript
-scale(n: number): Box3Vector3
-```
 !!! warning "警告"
 
     此方法不会改变原来的<def>Box3Vector3</def>
@@ -234,94 +182,66 @@ scale(n: number): Box3Vector3
     ```javascript
     new Box3Vector3(1, 1, 1).scale(5) //<~ {x: 5, y: 5, z: 5 }
     ```
-<method>clone</method>
+<method>clone</method> (): <def>Box3Vector3</def>
 
 复制这个<def>Box3Vector3</def>
-#### 参数和返回值
-```typescript
-clone(): Box3Vector3
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(5, 5, 5).clone() //<~ { x: 5, y: 5, z: 5 }
     ```
-<method>lerp</method>
+<method>lerp</method> (v: <def>Box3Vector3</def>, n: <def>Number</def>): <def>Box3Vector3</def>
 
 插值函数，类似于取平均值  
 不同的是取平均值最后是除以2（乘0.5），这个可以自定义（乘1就是求和了）
-#### 参数和返回值
-```typescript
-lerp(v: Box3Vector3, n: number): Box3Vector3
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(0, 0, 0).lerp(new Box3Vector3(1, 1, 1), 0.5) //<~ { x: 0.5, y: 0.5, z: 0.5 }
     ```
-<method>mag</method>
+<method>mag</method> (): <def>Number</def>
 
 求这个<def>Box3Vector3</def>的大小
-#### 参数和返回值
-```typescript
-mag(): number
-```
 ??? example "示例"
     ```javascript
     new Box3Vector3(1, 0, 0).mag() //<~ 1
     new Box3Vector3(3, 4, 5).mag() //<~ 7.0710678118654755
     new Box3Vector3(11, 45, 14).mag() //<~ 48.394214530251446
     ```
-<method>sqrMag</method>
+<method>sqrMag</method> (): <def>Number</def>
 
 似乎是求这个<def>Box3Vector3</def>大小的平方（比你用mag再用<function>pow</function>函数快）  
-#### 参数和返回值
-```typescript
-sqrMag(): number
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(1, 0, 0).sqrMag() //<~ 1 //岛民小小的吐槽一句：这和mag的示例1结果一样，是因为1的平方还是1（）
 new Box3Vector3(3, 4, 5).sqrMag() //<~ 50
 new Box3Vector3(11, 45, 14).sqrMag() //<~ 2342
 ```
-<method>towards</method>
+<method>towards</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 返回一个<def>Box3Vector3</def>面向另一个<def>Box3Vector3</def>的值  
-#### 参数和返回值
-```typescript
-towards(v: Box3Vector3): Box3Vector3
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(6, 6, 6).sub(new Box3Vector3(1, 1, 1)) //<~ { x: 5, y: 5, z: 5 }
 new Box3Vector3(-6, 6, 6).sub(new Box3Vector3(1, 1, 1)) //<~ { x: -7, y: 5, z: 5 }
 ```
-<method>distance</method>
+<method>distance</method> (v: <def>Box3Vector3</def>): <def>Number</def>
 
 返回一个<def>Box3Vector3</def>到另一个<def>Box3Vector3</def>的距离
-#### 参数和返回值
-```typescript
-distance(v: Box3Vector3): number
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(6, 0, 0).distance(new Box3Vector3(1, 0, 0)) //<~ 5
 new Box3Vector3(6, 6, 6).distance(new Box3Vector3(1, 1, 1)) //<~ 8.660254037844387
 ```
-<method>normalize</method>
+<method>normalize</method> (): Box3Vector3
 
 ???+ quote "以下内容来自网络"
     归一化函数
 
-#### 参数和返回值
-```typescript
-normalize(): Box3Vector3
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(6, 0, 0).normalize() //<~ { x: 1, y: 0, z: 0 }
 new Box3Vector3(11, 45, 14).normalize() //<~ { x:0.17032272243312657, y:0.6967747735900632, z:0.6967747735900632 }
 ```
-<method>angle</method>
+<method>angle</method> (v: <def>Box3Vector3</def>): <def>Number</def>
 
 求这个<def>Box3Vector3</def>与另一个<def>Box3Vector3</def>的弧度
 !!! warning "是弧度，不是角度！"
@@ -337,44 +257,28 @@ new Box3Vector3(11, 45, 14).normalize() //<~ { x:0.17032272243312657, y:0.696774
 
     ——资料来源于[百度百科](https://baike.baidu.com/item/%E5%BC%A7%E5%BA%A6/1533188?fr=aladdin)
 
-#### 参数和返回值
-```typescript
-angle(v: Box3Vector3): number
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(6, 0, 0).angle(new Box3Vector3(-6, 0, 0)) //<~ 3.141592653589793
 new Box3Vector3(1, 1, 0).angle(new Box3Vector3(1, 0, 0)) //<~ 0.7853981633974484 //约为0.25 * Math.PI
 ```
-<method>max</method>
+<method>max</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 对两个<def>Box3Vector3</def>的每个方向的坐标值，取每个方向的最大值  
-#### 参数和返回值
-```typescript
-max(v: Box3Vector3): Box3Vector3
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(1, 2, 1).max(new Box3Vector3(2, 1, 2)) //<~ { x:2, y:2, z:2 }
 ```
-<method>min</method>
+<method>min</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
 
 对两个<def>Box3Vector3</def>的每个方向的坐标值，取每个方向的最小值  
-#### 参数和返回值
-```typescript
-min(v: Box3Vector3): Box3Vector3
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(1, 2, 1).min(new Box3Vector3(2, 1, 2)) //<~ { x:1, y:1, z:1 }
 ```
-<method>exactEquals</method>
+<method>exactEquals</method> (v: <def>Box3Vector3</def>): <def>Boolean</def>
 
 判断两个<def>Box3Vector3</def>是否相等
-#### 参数和返回值
-```typescript
-exactEquals(v: Box3Vector3): boolean
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(1, 2, 3).exactEquals(new Box3Vector3(1, 2, 3)) //<~ true
@@ -382,17 +286,13 @@ new Box3Vector3(1, 2, 3).exactEquals(new Box3Vector3(4, 5, 6)) //<~ false
 new Box3Vector3(1, 2, 3).exactEquals(new Box3Vector3(1.000001, 2, 3)) //<~ false
 new Box3Vector3(1, 2, 3).exactEquals(new Box3Vector3(1.000000000000001, 2, 3)) //<~ false
 ```
-<method>equals</method>
+<method>equals</method> (v: <def>Box3Vector3</def>): <def>Boolean</def>
 
 判断两个<def>Box3Vector3</def>的差值是否小于一个数（暂时固定为0.000001）
 !!! warning "警告"
 
     此处与官方API不符，因为官方API不是最新
 
-#### 参数和返回值
-```typescript
-equals(v: Box3Vector3): boolean
-```
 ??? example "示例"
 ```javascript
 new Box3Vector3(1, 2, 3).equals(new Box3Vector3(1, 2, 3)) //<~ true
@@ -400,23 +300,15 @@ new Box3Vector3(1, 2, 3).equals(new Box3Vector3(4, 5, 6)) //<~ false
 new Box3Vector3(1, 2, 3).equals(new Box3Vector3(1.000001, 2, 3)) //<~ true
 new Box3Vector3(1, 2, 3).equals(new Box3Vector3(1.000000000000001, 2, 3)) //<~ true
 ```
-<method>toString</method>
+<method>toString</method> (): <def>String</def>
 
 将这个<def>Box3Vector3</def>转换成字符串
-#### 参数和返回值
-```typescript
-toString(): string
-```
 ??? example "示例"
 ```javascript
 JSON.stringify(new Box3Vector3(114514, 1919810, 31415926535).toString()) //<~ "{ x:114514, y:1919810, z:31415926535 }" //这里加个JSON.stringify的含义是方便表示类型
 ```
-`static`<method> fromPolar</method>
-似乎是用不同寻常的方法造一个<def>Box3Vector3</def>（？）
-#### 参数和返回值
-```typescript
-static fromPolar(mag: number, phi: number, theta: number): Box3Vector3
-```
+`static`<method> fromPolar</method> (mag: <def>Number</def>, phi: <def>Number</def>, theta: <def>Number</def>): <def>Box3Vector3</def>
+似乎是用 ~~不同寻常~~ 的方法造一个<def>Box3Vector3</def>（？）
 ??? example "示例"
 ```javascript
 Box3Vector3.fromPolar(114514, 1919810, 31415926535) //<~ { x:-89551.55210093308, y:71368.36064229338, z:729.9394121558898 } //瞎写的（）
