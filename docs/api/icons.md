@@ -73,6 +73,15 @@ API 文档中会出现一些表示类型的图标，下面是常用图标的含�
   .icon-item {
     padding: 0 8px;
     border: 1px solid transparent;
+    transition-duration: 0.25s;
+  }
+  .icon-item:hover{
+    background: rgba(32, 148, 243, 0.3);
+  }
+  .icon-item:active{
+    border-color: #2094f3;
+    background: rgba(32, 148, 243, 0.8);
+    transition-duration: 0s;
   }
 </style>
 <script>

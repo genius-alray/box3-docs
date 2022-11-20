@@ -74,6 +74,7 @@ onFluidEnter / nextFluidEnter () : Box3EventChannel<Box3FluidContactEvent> / Box
 onFluidLeave / nextFluidLeave() : Box3EventChannel<Box3FluidContactEvent> / Box3EventFuture<Box3FluidContactEvent>
 当实体离开液体(或未来)触发
 
+
 zones () : Box3Zone[]
 返回所有的区域选择器
 
