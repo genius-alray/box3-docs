@@ -1,9 +1,11 @@
-!!! bug "页面缺失"
+Box3 中当玩家复活时触发的事件
 
-    API文档内容繁多，有一些页面还未完工。
+本事件在 box3 中表示为玩家复活
 
-    如果你愿意为此贡献一份力量，请[加入我们](/about)
+## 事件参数
 
-    > 官方文档中也没有此内容，我们正在努力编写。
+<property>tick</property> : <def>number</def>
+: 事件发生的时间
 
-    [返回](javascript:history.back()){.md-button}
+<property>entity</property> : <def>Box3Entity</def>
+: 复活的玩家

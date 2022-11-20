@@ -13,3 +13,18 @@
 
 本文档完全开源，如果你有什么疑问或者想要分享，欢迎在 GitHub 上提交 PR 或者 issue。
 如果你发现某处错误或者想要补充，请点击页面右上角的编辑按钮来提交改进
+
+!!! note "参与编写的人员"
+
+    #### 感谢以下参与该文档编写的人员
+    - 发起者 | AlanBestHacker - [Github个人主页](https://github.com/alan-best)
+
+    - 贡献者
+
+        - Edgar_勿安 - [Github个人主页](https://github.com/Edgar-wuan)
+        - 可乐OωO
+        - 全能岛民
+        - 屑全能 [神奇代码岛个人主页](https://box3.codemao.cn/u/jmd123456)
+        - 树树屑
+        - Nomen - [神奇代码岛个人主页](https://box3.codemao.cn/u/zhongjimo)
+        - 编码喵 - [神奇代码岛个人主页](https://box3.codemao.cn/u/codemiao2008)
