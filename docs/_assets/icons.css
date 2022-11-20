@@ -8,11 +8,13 @@ def {
   border-bottom: 1px solid transparent;
   /* padding-left: 20px;
   text-indent: -20px; */
-  transition-duration: 0.25s;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
   font-weight: bold;
 }
 .kind-icon:hover {
@@ -22,7 +24,6 @@ def {
   background-color: rgba(32, 148, 243, 0.3);
   border-color: #2094f3;
   /* box-shadow: 0 1px 3px #2094f3; */
-  transition-duration: 0s;
 }
 .kind-icon:before {
   content: "";

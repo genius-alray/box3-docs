@@ -144,6 +144,7 @@ nav:
       - <icon name='enum'>数据库</icon>: api/database.md
       - <icon name='type'>结构类型</icon>:
           - <icon name='namespace'>基本数据类型</icon>:
+              - <def>String</def>: api/type/base/String.md
               - <def>Number</def>: api/type/base/Number.md
               - <def>Boolean</def>: api/type/base/Boolean.md
               - <def>Partial</def>: api/type/base/Partial.md
