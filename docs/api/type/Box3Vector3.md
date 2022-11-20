@@ -55,7 +55,7 @@ new Box3Vector3(19, 19, 810)
 
     （一个小知识：官方文档的类型也可以这么读）
 
-<method>set</method>(x: <def>Number</def>, y: <def>Number</def>, z: <def>Number</def>) : <def>Box3Vector3</def>
+<method>set</method> (x: <def>Number</def>, y: <def>Number</def>, z: <def>Number</def>): <def>Box3Vector3</def>
 
 设置<def>Box3Vector3</def>的值  
 ??? example "示例"
