@@ -9,9 +9,11 @@ def {
   /* padding-left: 20px;
   text-indent: -20px; */
   cursor: pointer;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  user-select: none;/*
+  -webkit-user-select: none;
+  -moz-user-select: none;*//*写两个干嘛*/
 
   font-weight: bold;
 }
