@@ -56,12 +56,13 @@ const iconTagMap = {
   property: "property parent-class",
   bool: "static",
   readonly: "property parent-class protected",
-  hiddenMethod: "method private",
+  hiddenMethod: "method parent-class private",
   object: "object",
   constructor: "constructor parent-class",
   interface: "interface",
   class: "class",
   staticMethod:"static method parent-class",
+  hiddenStaticMethod:"static function parent-class private",
 };
 function createIconElement(text, id) {
   const list = id.split(" ");
