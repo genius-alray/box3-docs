@@ -3,9 +3,8 @@
 [官方文档（非常不全）](https://docs.box3.codemao.cn/box3vector3.html)  
 : <def>Box3Vector3</def>（三维向量）是Box3中一个非常常见的`类`
 ## 构造函数
-```typescript
-new Box3Vector3(x: number, y: number, z: number)
-```
+new <def>Box3Vector3</def>(x: <def>number</def>, y: <def>number</def>, z: <def>number</def>): <def>Box3Vector3</def>
+
 ??? example "示例"
 ```javascript
 new Box3Vector3(0, 0, 0)
@@ -30,39 +29,13 @@ new Box3Vector3(19, 19, 810)
 [<hiddenMethod>divEq</hiddenMethod>](#divEq)  
 [<method>equals</method>](#equals)  
 [<method>distance</method>](#distance)  
+[<method>min</method>](#min)
+[<method>max</method>](#max)
 ## 方法
 
 !!! note "提示"
 
     下列全部\[示例\]的代码后面的注释为预期的运行结果，可以不用看“<~”，这只是一个提示符
-
-??? question "如何读`typescipt`"
-
-    在这篇文档里，所有的参数和返回值的表达全部使用`typescript`代码（~~懒得做表格~~），对不认识`typescript`的人来说难以理解  
-    不过，这篇文档的`typescript`代码还是非常容易理解的  
-    我们以[<method>set</method>](#set)函数为例：  
-    : set(x: <def>number</def>, y: <def>number</def>, z: <def>number</def>): <def>Box3Vector3</def>
-
-    其中，括号前面的是函数名，括号里面的内容是参数（英文逗号分隔），括号后面的是返回类型  
-    例如，“set”是函数名，“x: number”是参数，Box3Vector3是返回类型  
-    在参数中，“:”前面是参数名，后面是类型  
-    例如：  
-    : x: <def>number</def>
-
-    其中“x”是参数，“number”是类型  
-    回到开始，`set`函数的参数和返回值就是：  
-    输入：
-
-    | 参数名 | 类型 |
-    | :- | :- |
-    | x | <def>number</def> |
-    | y | <def>number</def> |
-    | z | <def>number</def> |
-
-    输出：
-    <def>Box3Vector3</def>类型
-
-    （一个小知识：官方文档的类型也可以这么读）
 
 <span anchor="set"><method>set</method> (x: <def>number</def>, y: <def>number</def>, z: <def>number</def>): <def>Box3Vector3</def></span>
 
@@ -271,16 +244,20 @@ new Box3Vector3(19, 19, 810)
     new Box3Vector3(6, 0, 0).angle(new Box3Vector3(-6, 0, 0)) //<~ 3.141592653589793
     new Box3Vector3(1, 1, 0).angle(new Box3Vector3(1, 0, 0)) //<~ 0.7853981633974484 //约为0.25 * Math.PI
     ```
-<method>max</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
+<span anchor="max"><method>max</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def></span>
 
 : 对两个<def>Box3Vector3</def>的每个方向的坐标值，取每个方向的最大值  
+在<def>Box3Bounds3</def>上特别好用  
+
 ??? example "示例"
     ```javascript
     new Box3Vector3(1, 2, 1).max(new Box3Vector3(2, 1, 2)) //<~ { x:2, y:2, z:2 }
     ```
-<method>min</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def>
+<span anchor="min"><method>min</method> (v: <def>Box3Vector3</def>): <def>Box3Vector3</def></span>
 
 : 对两个<def>Box3Vector3</def>的每个方向的坐标值，取每个方向的最小值  
+在<def>Box3Bounds3</def>上特别好用  
+
 ??? example "示例"
     ```javascript
     new Box3Vector3(1, 2, 1).min(new Box3Vector3(2, 1, 2)) //<~ { x:1, y:1, z:1 }
@@ -309,7 +286,7 @@ new Box3Vector3(19, 19, 810)
     new Box3Vector3(1, 2, 3).equals(new Box3Vector3(1.000001, 2, 3)) //<~ true
     new Box3Vector3(1, 2, 3).equals(new Box3Vector3(1.000000000000001, 2, 3)) //<~ true
     ```
-<method>toString</method> (): <def>String</def>
+<span anchor="toString"><method>toString</method> (): <def>String</def></span>
 
 : 将这个<def>Box3Vector3</def>转换成字符串
 ??? example "示例"
