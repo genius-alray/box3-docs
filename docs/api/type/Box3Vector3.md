@@ -1,8 +1,7 @@
 # <def>Box3Vector3</def>
 
 [官方文档（非常不全）](https://docs.box3.codemao.cn/box3vector3.html)  
-<def>Box3Vector3</def>
-: （三维向量）是Box3中一个非常常见的`类`
+: <def>Box3Vector3</def>（三维向量）是Box3中一个非常常见的`类`
 ## 构造函数
 ```typescript
 new Box3Vector3(x: number, y: number, z: number)
