@@ -1,7 +1,7 @@
 # <def>Box3Bounds3</def>
 
 [查阅官方文档](https://docs.box3.codemao.cn/box3bounds3.html){.md-button}  
-<def>Box3Bounds3</def> 用于指定世界中一个立方体空间区域
+<def>Box3Bounds3</def> 是用于指定世界中一个立方体空间区域的一个<class>类</class>
 
 ## 构造函数
 new <def>Box3Bounds3</def>(lo: <def>Box3Vector3</def>, hi: <def>Box3Vector3</def>): <def>Box3Bounds3</def>  
