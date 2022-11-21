@@ -1,6 +1,6 @@
 # <def>Box3Vector3</def>
 
-[官方文档（非常不全）](https://docs.box3.codemao.cn/box3vector3.html)  
+[查阅官方文档（非常不全）](https://docs.box3.codemao.cn/box3vector3.html){.md-button}  
 : <def>Box3Vector3</def>（三维向量）是Box3中一个非常常见的`类`
 ## 构造函数
 new <def>Box3Vector3</def>(x: <def>number</def>, y: <def>number</def>, z: <def>number</def>): <def>Box3Vector3</def>

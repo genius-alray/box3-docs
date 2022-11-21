@@ -1,6 +1,6 @@
 # <def>Box3Bounds3</def>
 
-[官方文档](https://docs.box3.codemao.cn/box3bounds3.html)  
+[查阅官方文档](https://docs.box3.codemao.cn/box3bounds3.html){.md-button}  
 <def>Box3Bounds3</def> 用于指定世界中一个立方体空间区域
 
 ## 构造函数
