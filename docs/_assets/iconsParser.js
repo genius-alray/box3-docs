@@ -45,11 +45,13 @@ const iconTagMap = {
   arg: "variable parent-enum",
   property: "property parent-class",
   bool: "static",
-  readonly: "property protected",
+  readonly: "property parent-class protected",
   hiddenMethod: "method private",
   object: "object",
   constructor: "constructor parent-class",
   interface: "interface",
+  class: "class",
+  staticMethod:"static method parent-class",
 };
 function createIconElement(text, id) {
   const list = id.split(" ");
