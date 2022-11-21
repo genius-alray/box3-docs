@@ -6,6 +6,12 @@
 
 # 常用
 
+- [<listener>onTick</listener>](#c1)
+- [<listener>onPlayerJoin</listener>](#c2)
+- [<method>querySelector</method>/<method>querySelectorAll</method>](#c3)
+- [<listener>onClick</listener>](#c4)
+- [<method>say</method>](#c5)
+
 ---
 
 # 属性
@@ -179,7 +185,7 @@
 : 创建一个新的<def>Box3Entity</def>或复制一个现有实体
 如果超过了实体配额，则返回 <def>null</def>
 
-<method> querySelector</method> (selector: <def>Box3SelectorString</def>) : <def> Box3Entity</def> | <def>null</def>
+<span anchor="c3"><method> querySelector</method> (selector: <def>Box3SelectorString</def>) : <def> Box3Entity</def> | <def>null</def></span>
 
 : 通过选择器来查找一个实体，如果找不到，则会返回<def>null</def>
 
@@ -319,6 +325,10 @@
         })
         ```
 
+<span anchor="c5"><method>say</method> (message: <def>String</def>) : void</span>
+
+: 向世界中所有玩家广播
+
 ---
 
 # 事件
@@ -327,7 +337,7 @@
 
 : 玩家复活(或未来)触发
 
-<listener>onTick</listener> / <promiseEvent>nextTick</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3TickEvent</def>>
+<span anchor="c1"><listener>onTick</listener> / <promiseEvent>nextTick</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3TickEvent</def>></span>
 
 : Tick 事件，详情请看<def>Box3TickEvent</def>
 
@@ -339,9 +349,18 @@
 
 : 当实体死亡(或未来)触发
 
-<listener>onPlayerJoin</listener> / <promiseEvent>nextPlayerJoin</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3PlayerEntityEvent</def>>
+<span anchor="c2"><listener>onPlayerJoin</listener> / <promiseEvent>nextPlayerJoin</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3PlayerEntityEvent</def>></anchor>
 
 : 当玩家进入世界(或未来)触发
+
+    ??? example "示例"
+
+        ```javascript
+        // 玩家进入地图时，向TA发送一条私信。
+        world.onPlayerJoin(({ entity }) => {
+            entity.player.directMessage(`你好，${entity.player.name}`);
+        });
+        ```
 
 <listener>onPlayerLeave</listener> / <promiseEvent>nextPlayerLeave</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3PlayerEntityEvent</def>>
 
@@ -355,38 +374,46 @@
 
 : 当实体被销毁(或未来)触发
 
-<!-- <listener>onChat</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onChat</listener> / <promiseEvent>nextChat</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3ChatEvent</def>>
 
-:
+: 当玩家发言(或未来)触发
 
-<listener>onClick</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<span anchor="c4"><listener>onClick</listener> / <promiseEvent>nextClick</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3ClickEvent</def>><span>
 
-:
+: 当玩家点击(或未来)触发
 
-<listener>onPress</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onPress</listener> / <promiseEvent>nextPress</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3InputEvent</def>>
 
-:
+: 当玩家按下按键(或未来)触发
 
-<listener>onRelease</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onRelease</listener> / <promiseEvent>nextRelease</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3InputEvent</def>>
 
-:
+: 当玩家松开按键(或未来)触发
 
-<listener>onEntityContact</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onEntityContact</listener> / <promiseEvent>nextEntityContact</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3EntityContactEvent</def>>
 
-:
+: 当实体碰撞(或未来)触发
 
-<listener>onEntitySeparate</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onEntitySeparate</listener> / <promiseEvent>nextEntitySeparate</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3EntityContactEvent</def>>
 
-:
+: 当实体分开(或未来)触发
 
-<listener>onVoxelContact</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onVoxelContact</listener> / <promiseEvent>nextVoxelContact</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3VoxelContactEvent</def>>
 
-:
+: 当实体碰到方块(或未来)触发
 
-<listener>onVoxelSeparate</listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onVoxelSeparate</listener> / <promiseEvent>nextVoxelSeparate</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3VoxelContactEvent</def>>
 
-:
+: 当实体离开方块(或未来)触发
 
-<listener></listener> / <promiseEvent></promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def></def>>
+<listener>onInteract</listener> / <promiseEvent>nextInteract</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3InteractEvent</def>>
 
-: -->
+: 当玩家与实体互动(或未来)触发
+
+<listener>onFluidEnter</listener> / <promiseEvent>nextFluidEnter</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3FluidContactEvent</def>>
+
+: 当实体进入液体(或未来)触发
+
+<listener>onFluidLeave</listener> / <promiseEvent>nextFluidLeave</promiseEvent> : <def> Box3EventChannel</def> / <def> Box3EventFuture</def><<def>Box3FluidContactEvent</def>>
+
+: 当实体离开液体(或未来)触发

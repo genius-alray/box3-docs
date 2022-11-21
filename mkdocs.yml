@@ -38,7 +38,9 @@ extra_javascript:
   - _assets/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
+  - https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js
+  - _assets/anchorParser.js
 markdown_extensions:
   - abbr
   - admonition
@@ -140,6 +142,14 @@ nav:
           - <def>Box3DieEvent</def>: api/event/Box3DieEvent.md
           - <def>Box3PlayerEntityEvent</def>: api/event/Box3PlayerEntityEvent.md
           - <def>Box3EntityEvent</def>: api/event/Box3EntityEvent.md
+          - <def>Box3ChatEvent</def>: api/event/Box3ChatEvent.md
+          - <def>Box3ClickEvent</def>: api/event/Box3ClickEvent.md
+          - <def>Box3InputEvent</def>: api/event/Box3InputEvent.md
+          - <def>Box3EntityContactEvent</def>: api/event/Box3EntityContactEvent.md
+          - <def>Box3VoxelContactEvent</def>: api/event/Box3VoxelContactEvent.md
+          - <def>Box3InteractEvent</def>: api/event/Box3InteractEvent.md
+          - <def>Box3FluidContactEvent</def>: api/event/Box3FluidContactEvent.md
+          - <def>Box3VoxelContactEvent</def>: api/event/Box3VoxelContactEvent.md
 
       - <icon name='enum'>数据库</icon>: api/database.md
       - <icon name='type'>结构类型</icon>:
@@ -157,7 +167,10 @@ nav:
           - <def>Box3RaycastOptions</def>: api/type/Box3RaycastOptions.md
           - <def>Box3Bounds3</def>: api/type/Box3Bounds3.md
           - <def>Box3RGBColor</def>: api/type/Box3RGBColor.md
+          - <def>Box3RGBAColor</def>: api/type/Box3RGBAColor.md
           - <def>Box3SoundEffect</def>: api/type/Box3SoundEffect.md
+          - <def>Box3ButtonType</def>: api/type/Box3ButtonType.md
+          - <def>Box3RaycastResult</def>: api/type/Box3RaycastResult.md
 
       - <icon name='signature'>动画</icon>:
           - <def>Box3WorldKeyframe</def>: api/type/Box3WorldKeyframe.md

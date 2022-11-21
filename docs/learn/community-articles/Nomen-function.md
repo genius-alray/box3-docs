@@ -103,7 +103,7 @@ function myFunction(coin){//提供一个coin<arg>形参</arg>
 }
 
 console.log(
-myFunction(15);//传入15
+  myFunction(15);//传入15
 )//控制台得到返回为16，并打印
 
 ```
@@ -136,41 +136,42 @@ myFunction(15);//传入15
 或许大家对此没什么太大的概念
 
 ```javascript
-const materials = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
 console.log(materials.map((material) => material.length));
 //让我们看看这一小段代码
 //在这个代码中，我们发现了箭头函数的一个小特点，就是有一个突出的"=>"
 //真是形象生动，所以才叫做箭头函数
 
-function func(a){}
+function func(a) {}
 
 //等价于
 
-(a)=>{}
+(a) => {};
+```
 
 这其中的(a)就是用于接收<property>参数</property>的<arg>形参</arg>，箭头指向其函数体
-
-```
 
 那么到现在为止，箭头函数已经很分明了，与普通函数结构基本相似： <property>参数</property>，箭头，函数体
 !!! quote ""
 
+      ```javascript
       (param1, param2, …, paramN) => { statements }
       (param1, param2, …, paramN) => expression
-      相当于：(param1, param2, …, paramN) =>{ return expression; }
+      ```
+      前两者相当于：`(param1, param2, …, paramN) =>{ return expression; }`
 
       当只有一个<property>参数</property>时，圆括号是可选的：
+      ```javascript
       (singleParam) => { statements }
       singleParam => { statements }
+      //上面两种写法都是可以的
+      ```
 
       没有<property>参数</property>的函数应该写成一对圆括号。
+      ```javascript
       () => { statements }
+      ```
 
       ——来自 MDN 社区的示例
 
@@ -228,7 +229,7 @@ const myObj = {
 
 `this` 会随着环境变化改变指向，如果使用引用变量函数，那么函数的指向会变为 `window`/`global` 或在严格模式下变成 `undefined`
 
-请大家注意这一点，这个历史遗留问题会导致一些奇怪的逻辑问题，所以请注意使用 `this` 的时候考虑指向问题
+请大家注意这一点，这个历史遗留问题会导致一些奇怪的逻辑问题，所以请注意使用 `this` 的时候考虑指向问题。因此，在使用[箭头函数](#_4)箭头函数时要十分慎重。
 
 #### 方法的重写
 
@@ -298,9 +299,9 @@ console.log(greeting);
 
 ```javascript
 const myPromise = new Promise(((resolve, reject) => {
-setTimeout(() => {
-resolve('foo');
-}, 300);
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
 });)
 ```
 
@@ -370,16 +371,16 @@ tag 函数从模板传递字符串文本数组以及变量值列表
 ```javascript
 
 function cook(strs, ...substs) {
-return substs.reduce(
-(prev,cur,i) => prev+cur+strs[i+1],
-strs[0]
-);
+  return substs.reduce(
+    (prev,cur,i) => prev+cur+strs[i+1],
+    strs[0]
+  );
 }
 
 function repeat(times) {
-return function (...args) {
-return cook(...args).repeat(times);
-};
+  return function (...args) {
+    return cook(...args).repeat(times);
+  };
 }
 
 // 运行结果
