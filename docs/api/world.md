@@ -176,7 +176,7 @@
 
 # 方法
 
-<method>entityQuota</method> () : <def>Number</def>
+<method>entityQuota</method> () : <def>number</def>
 
 : 返回世界当前允许创建的实体的剩余数量
 
@@ -298,7 +298,7 @@
 
 : 获取所有玩家的动画对象
 
-<method>sound</method> (spec: <interface>spec[见下文]</interface> | string) : void
+<method>sound</method> (spec: <interface>spec[见下文]</interface> | <def>string</def>) : void
 
 : 在指定位置播放声音
 
