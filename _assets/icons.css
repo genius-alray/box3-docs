@@ -1,0 +1,925 @@
+icon,
+def {
+  display: none;
+}
+
+.kind-icon {
+  position: relative;
+  border-bottom: 1px solid transparent;
+  /* padding-left: 20px;
+  text-indent: -20px; */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  font-weight: bold;
+}
+.kind-icon:hover {
+  border-bottom-color: rgba(32, 148, 243, 0.3);
+}
+.kind-icon:active {
+  border-bottom-color: rgba(32, 148, 243, 0.5);
+  /* border-color: #2094f3; */
+  /* box-shadow: 0 1px 3px #2094f3; */
+}
+.kind-icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 2px 0;
+  /* background-image: url(./icons.png); 加载速度过慢时，再考虑切换为低分辨率图标*/
+
+  background-image: url(./icons@2x.png);
+  background-size: 238px 204px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .kind-icon:before {
+    background-image: url(./icons@2x.png);
+    background-size: 238px 204px;
+  }
+}
+
+.signature.kind-icon:before {
+  background-position: 0 -153px;
+}
+
+.object.kind-icon:before {
+  background-position: 0px -17px;
+}
+.object.protected.kind-icon:before {
+  background-position: -17px -17px;
+}
+.object.private.kind-icon:before {
+  background-position: -34px -17px;
+}
+
+.class.kind-icon:before {
+  background-position: 0px -34px;
+}
+.class.protected.kind-icon:before {
+  background-position: -17px -34px;
+}
+.class.private.kind-icon:before {
+  background-position: -34px -34px;
+}
+
+.class.generic.kind-icon:before {
+  background-position: 0px -51px;
+}
+.class.generic.protected.kind-icon:before {
+  background-position: -17px -51px;
+}
+.class.generic.private.kind-icon:before {
+  background-position: -34px -51px;
+}
+
+.interface.kind-icon:before {
+  background-position: 0px -68px;
+}
+.interface.protected.kind-icon:before {
+  background-position: -17px -68px;
+}
+.interface.private.kind-icon:before {
+  background-position: -34px -68px;
+}
+
+.interface.generic.kind-icon:before {
+  background-position: 0px -85px;
+}
+.interface.generic.protected.kind-icon:before {
+  background-position: -17px -85px;
+}
+.interface.generic.private.kind-icon:before {
+  background-position: -34px -85px;
+}
+
+.namespace.kind-icon:before {
+  background-position: 0px -102px;
+}
+.namespace.protected.kind-icon:before {
+  background-position: -17px -102px;
+}
+.namespace.private.kind-icon:before {
+  background-position: -34px -102px;
+}
+
+.module.kind-icon:before {
+  background-position: 0px -102px;
+}
+.module.protected.kind-icon:before {
+  background-position: -17px -102px;
+}
+.module.private.kind-icon:before {
+  background-position: -34px -102px;
+}
+
+.enum.kind-icon:before {
+  background-position: 0px -119px;
+}
+.enum.protected.kind-icon:before {
+  background-position: -17px -119px;
+}
+.enum.private.kind-icon:before {
+  background-position: -34px -119px;
+}
+
+.enum-member.kind-icon:before {
+  background-position: 0px -136px;
+}
+.enum-member.protected.kind-icon:before {
+  background-position: -17px -136px;
+}
+.enum-member.private.kind-icon:before {
+  background-position: -34px -136px;
+}
+
+.signature.kind-icon:before {
+  background-position: 0px -153px;
+}
+.signature.protected.kind-icon:before {
+  background-position: -17px -153px;
+}
+.signature.private.kind-icon:before {
+  background-position: -34px -153px;
+}
+
+.type.kind-icon:before {
+  background-position: 0px -170px;
+}
+.type.protected.kind-icon:before {
+  background-position: -17px -170px;
+}
+.type.private.kind-icon:before {
+  background-position: -34px -170px;
+}
+
+.type.generic.kind-icon:before {
+  background-position: 0px -187px;
+}
+.type.generic.protected.kind-icon:before {
+  background-position: -17px -187px;
+}
+.type.generic.private.kind-icon:before {
+  background-position: -34px -187px;
+}
+
+.variable.kind-icon:before {
+  background-position: -136px -0px;
+}
+.variable.protected.kind-icon:before {
+  background-position: -153px -0px;
+}
+.variable.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.variable.parent-class.kind-icon:before {
+  background-position: -51px -0px;
+}
+.variable.parent-class.inherited.kind-icon:before {
+  background-position: -68px -0px;
+}
+.variable.parent-class.protected.kind-icon:before {
+  background-position: -85px -0px;
+}
+.variable.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -0px;
+}
+.variable.parent-class.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.variable.parent-enum.kind-icon:before {
+  background-position: -170px -0px;
+}
+.variable.parent-enum.protected.kind-icon:before {
+  background-position: -187px -0px;
+}
+.variable.parent-enum.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.variable.parent-interface.kind-icon:before {
+  background-position: -204px -0px;
+}
+.variable.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -0px;
+}
+
+.property.kind-icon:before {
+  background-position: -136px -0px;
+}
+.property.protected.kind-icon:before {
+  background-position: -153px -0px;
+}
+.property.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.property.parent-class.kind-icon:before {
+  background-position: -51px -0px;
+}
+.property.parent-class.inherited.kind-icon:before {
+  background-position: -68px -0px;
+}
+.property.parent-class.protected.kind-icon:before {
+  background-position: -85px -0px;
+}
+.property.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -0px;
+}
+.property.parent-class.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.property.parent-enum.kind-icon:before {
+  background-position: -170px -0px;
+}
+.property.parent-enum.protected.kind-icon:before {
+  background-position: -187px -0px;
+}
+.property.parent-enum.private.kind-icon:before {
+  background-position: -119px -0px;
+}
+.property.parent-interface.kind-icon:before {
+  background-position: -204px -0px;
+}
+.property.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -0px;
+}
+
+.getter.kind-icon:before {
+  background-position: -136px -17px;
+}
+.getter.protected.kind-icon:before {
+  background-position: -153px -17px;
+}
+.getter.private.kind-icon:before {
+  background-position: -119px -17px;
+}
+.getter.parent-class.kind-icon:before {
+  background-position: -51px -17px;
+}
+.getter.parent-class.inherited.kind-icon:before {
+  background-position: -68px -17px;
+}
+.getter.parent-class.protected.kind-icon:before {
+  background-position: -85px -17px;
+}
+.getter.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -17px;
+}
+.getter.parent-class.private.kind-icon:before {
+  background-position: -119px -17px;
+}
+.getter.parent-enum.kind-icon:before {
+  background-position: -170px -17px;
+}
+.getter.parent-enum.protected.kind-icon:before {
+  background-position: -187px -17px;
+}
+.getter.parent-enum.private.kind-icon:before {
+  background-position: -119px -17px;
+}
+.getter.parent-interface.kind-icon:before {
+  background-position: -204px -17px;
+}
+.getter.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -17px;
+}
+
+.setter.kind-icon:before {
+  background-position: -136px -34px;
+}
+.setter.protected.kind-icon:before {
+  background-position: -153px -34px;
+}
+.setter.private.kind-icon:before {
+  background-position: -119px -34px;
+}
+.setter.parent-class.kind-icon:before {
+  background-position: -51px -34px;
+}
+.setter.parent-class.inherited.kind-icon:before {
+  background-position: -68px -34px;
+}
+.setter.parent-class.protected.kind-icon:before {
+  background-position: -85px -34px;
+}
+.setter.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -34px;
+}
+.setter.parent-class.private.kind-icon:before {
+  background-position: -119px -34px;
+}
+.setter.parent-enum.kind-icon:before {
+  background-position: -170px -34px;
+}
+.setter.parent-enum.protected.kind-icon:before {
+  background-position: -187px -34px;
+}
+.setter.parent-enum.private.kind-icon:before {
+  background-position: -119px -34px;
+}
+.setter.parent-interface.kind-icon:before {
+  background-position: -204px -34px;
+}
+.setter.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -34px;
+}
+
+.accessor.kind-icon:before {
+  background-position: -136px -51px;
+}
+.accessor.protected.kind-icon:before {
+  background-position: -153px -51px;
+}
+.accessor.private.kind-icon:before {
+  background-position: -119px -51px;
+}
+.accessor.parent-class.kind-icon:before {
+  background-position: -51px -51px;
+}
+.accessor.parent-class.inherited.kind-icon:before {
+  background-position: -68px -51px;
+}
+.accessor.parent-class.protected.kind-icon:before {
+  background-position: -85px -51px;
+}
+.accessor.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -51px;
+}
+.accessor.parent-class.private.kind-icon:before {
+  background-position: -119px -51px;
+}
+.accessor.parent-enum.kind-icon:before {
+  background-position: -170px -51px;
+}
+.accessor.parent-enum.protected.kind-icon:before {
+  background-position: -187px -51px;
+}
+.accessor.parent-enum.private.kind-icon:before {
+  background-position: -119px -51px;
+}
+.accessor.parent-interface.kind-icon:before {
+  background-position: -204px -51px;
+}
+.accessor.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -51px;
+}
+
+.function.kind-icon:before {
+  background-position: -136px -68px;
+}
+.function.protected.kind-icon:before {
+  background-position: -153px -68px;
+}
+.function.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.function.parent-class.kind-icon:before {
+  background-position: -51px -68px;
+}
+.function.parent-class.inherited.kind-icon:before {
+  background-position: -68px -68px;
+}
+.function.parent-class.protected.kind-icon:before {
+  background-position: -85px -68px;
+}
+.function.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -68px;
+}
+.function.parent-class.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.function.parent-enum.kind-icon:before {
+  background-position: -170px -68px;
+}
+.function.parent-enum.protected.kind-icon:before {
+  background-position: -187px -68px;
+}
+.function.parent-enum.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.function.parent-interface.kind-icon:before {
+  background-position: -204px -68px;
+}
+.function.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -68px;
+}
+
+.method.kind-icon:before {
+  background-position: -136px -68px;
+}
+.method.protected.kind-icon:before {
+  background-position: -153px -68px;
+}
+.method.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.method.parent-class.kind-icon:before {
+  background-position: -51px -68px;
+}
+.method.parent-class.inherited.kind-icon:before {
+  background-position: -68px -68px;
+}
+.method.parent-class.protected.kind-icon:before {
+  background-position: -85px -68px;
+}
+.method.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -68px;
+}
+.method.parent-class.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.method.parent-enum.kind-icon:before {
+  background-position: -170px -68px;
+}
+.method.parent-enum.protected.kind-icon:before {
+  background-position: -187px -68px;
+}
+.method.parent-enum.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.method.parent-interface.kind-icon:before {
+  background-position: -204px -68px;
+}
+.method.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -68px;
+}
+
+.callable.kind-icon:before {
+  background-position: -136px -68px;
+}
+.callable.protected.kind-icon:before {
+  background-position: -153px -68px;
+}
+.callable.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.callable.parent-class.kind-icon:before {
+  background-position: -51px -68px;
+}
+.callable.parent-class.inherited.kind-icon:before {
+  background-position: -68px -68px;
+}
+.callable.parent-class.protected.kind-icon:before {
+  background-position: -85px -68px;
+}
+.callable.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -68px;
+}
+.callable.parent-class.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.callable.parent-enum.kind-icon:before {
+  background-position: -170px -68px;
+}
+.callable.parent-enum.protected.kind-icon:before {
+  background-position: -187px -68px;
+}
+.callable.parent-enum.private.kind-icon:before {
+  background-position: -119px -68px;
+}
+.callable.parent-interface.kind-icon:before {
+  background-position: -204px -68px;
+}
+.callable.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -68px;
+}
+
+.function.generic.kind-icon:before {
+  background-position: -136px -85px;
+}
+.function.generic.protected.kind-icon:before {
+  background-position: -153px -85px;
+}
+.function.generic.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.function.generic.parent-class.kind-icon:before {
+  background-position: -51px -85px;
+}
+.function.generic.parent-class.inherited.kind-icon:before {
+  background-position: -68px -85px;
+}
+.function.generic.parent-class.protected.kind-icon:before {
+  background-position: -85px -85px;
+}
+.function.generic.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -85px;
+}
+.function.generic.parent-class.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.function.generic.parent-enum.kind-icon:before {
+  background-position: -170px -85px;
+}
+.function.generic.parent-enum.protected.kind-icon:before {
+  background-position: -187px -85px;
+}
+.function.generic.parent-enum.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.function.generic.parent-interface.kind-icon:before {
+  background-position: -204px -85px;
+}
+.function.generic.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -85px;
+}
+
+.method.generic.kind-icon:before {
+  background-position: -136px -85px;
+}
+.method.generic.protected.kind-icon:before {
+  background-position: -153px -85px;
+}
+.method.generic.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.method.generic.parent-class.kind-icon:before {
+  background-position: -51px -85px;
+}
+.method.generic.parent-class.inherited.kind-icon:before {
+  background-position: -68px -85px;
+}
+.method.generic.parent-class.protected.kind-icon:before {
+  background-position: -85px -85px;
+}
+.method.generic.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -85px;
+}
+.method.generic.parent-class.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.method.generic.parent-enum.kind-icon:before {
+  background-position: -170px -85px;
+}
+.method.generic.parent-enum.protected.kind-icon:before {
+  background-position: -187px -85px;
+}
+.method.generic.parent-enum.private.kind-icon:before {
+  background-position: -119px -85px;
+}
+.method.generic.parent-interface.kind-icon:before {
+  background-position: -204px -85px;
+}
+.method.generic.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -85px;
+}
+
+.constructor.kind-icon:before {
+  background-position: -136px -102px;
+}
+.constructor.protected.kind-icon:before {
+  background-position: -153px -102px;
+}
+.constructor.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor.parent-class.kind-icon:before {
+  background-position: -51px -102px;
+}
+.constructor.parent-class.inherited.kind-icon:before {
+  background-position: -68px -102px;
+}
+.constructor.parent-class.protected.kind-icon:before {
+  background-position: -85px -102px;
+}
+.constructor.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -102px;
+}
+.constructor.parent-class.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor.parent-enum.kind-icon:before {
+  background-position: -170px -102px;
+}
+.constructor.parent-enum.protected.kind-icon:before {
+  background-position: -187px -102px;
+}
+.constructor.parent-enum.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor.parent-interface.kind-icon:before {
+  background-position: -204px -102px;
+}
+.constructor.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -102px;
+}
+
+.constructor-signature.kind-icon:before {
+  background-position: -136px -102px;
+}
+.constructor-signature.protected.kind-icon:before {
+  background-position: -153px -102px;
+}
+.constructor-signature.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor-signature.parent-class.kind-icon:before {
+  background-position: -51px -102px;
+}
+.constructor-signature.parent-class.inherited.kind-icon:before {
+  background-position: -68px -102px;
+}
+.constructor-signature.parent-class.protected.kind-icon:before {
+  background-position: -85px -102px;
+}
+.constructor-signature.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -102px;
+}
+.constructor-signature.parent-class.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor-signature.parent-enum.kind-icon:before {
+  background-position: -170px -102px;
+}
+.constructor-signature.parent-enum.protected.kind-icon:before {
+  background-position: -187px -102px;
+}
+.constructor-signature.parent-enum.private.kind-icon:before {
+  background-position: -119px -102px;
+}
+.constructor-signature.parent-interface.kind-icon:before {
+  background-position: -204px -102px;
+}
+.constructor-signature.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -102px;
+}
+
+.index.kind-icon:before {
+  background-position: -136px -119px;
+}
+.index.protected.kind-icon:before {
+  background-position: -153px -119px;
+}
+.index.private.kind-icon:before {
+  background-position: -119px -119px;
+}
+.index.parent-class.kind-icon:before {
+  background-position: -51px -119px;
+}
+.index.parent-class.inherited.kind-icon:before {
+  background-position: -68px -119px;
+}
+.index.parent-class.protected.kind-icon:before {
+  background-position: -85px -119px;
+}
+.index.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -119px;
+}
+.index.parent-class.private.kind-icon:before {
+  background-position: -119px -119px;
+}
+.index.parent-enum.kind-icon:before {
+  background-position: -170px -119px;
+}
+.index.parent-enum.protected.kind-icon:before {
+  background-position: -187px -119px;
+}
+.index.parent-enum.private.kind-icon:before {
+  background-position: -119px -119px;
+}
+.index.parent-interface.kind-icon:before {
+  background-position: -204px -119px;
+}
+.index.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -119px;
+}
+
+.event.kind-icon:before {
+  background-position: -136px -136px;
+}
+.event.protected.kind-icon:before {
+  background-position: -153px -136px;
+}
+.event.private.kind-icon:before {
+  background-position: -119px -136px;
+}
+.event.parent-class.kind-icon:before {
+  background-position: -51px -136px;
+}
+.event.parent-class.inherited.kind-icon:before {
+  background-position: -68px -136px;
+}
+.event.parent-class.protected.kind-icon:before {
+  background-position: -85px -136px;
+}
+.event.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -136px;
+}
+.event.parent-class.private.kind-icon:before {
+  background-position: -119px -136px;
+}
+.event.parent-enum.kind-icon:before {
+  background-position: -170px -136px;
+}
+.event.parent-enum.protected.kind-icon:before {
+  background-position: -187px -136px;
+}
+.event.parent-enum.private.kind-icon:before {
+  background-position: -119px -136px;
+}
+.event.parent-interface.kind-icon:before {
+  background-position: -204px -136px;
+}
+.event.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -136px;
+}
+
+.static.kind-icon:before {
+  background-position: -136px -153px;
+}
+.static.protected.kind-icon:before {
+  background-position: -153px -153px;
+}
+.static.private.kind-icon:before {
+  background-position: -119px -153px;
+}
+.static.parent-class.kind-icon:before {
+  background-position: -51px -153px;
+}
+.static.parent-class.inherited.kind-icon:before {
+  background-position: -68px -153px;
+}
+.static.parent-class.protected.kind-icon:before {
+  background-position: -85px -153px;
+}
+.static.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -153px;
+}
+.static.parent-class.private.kind-icon:before {
+  background-position: -119px -153px;
+}
+.static.parent-enum.kind-icon:before {
+  background-position: -170px -153px;
+}
+.static.parent-enum.protected.kind-icon:before {
+  background-position: -187px -153px;
+}
+.static.parent-enum.private.kind-icon:before {
+  background-position: -119px -153px;
+}
+.static.parent-interface.kind-icon:before {
+  background-position: -204px -153px;
+}
+.static.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -153px;
+}
+
+.static.function.kind-icon:before {
+  background-position: -136px -170px;
+}
+.static.function.protected.kind-icon:before {
+  background-position: -153px -170px;
+}
+.static.function.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.function.parent-class.kind-icon:before {
+  background-position: -51px -170px;
+}
+.static.function.parent-class.inherited.kind-icon:before {
+  background-position: -68px -170px;
+}
+.static.function.parent-class.protected.kind-icon:before {
+  background-position: -85px -170px;
+}
+.static.function.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -170px;
+}
+.static.function.parent-class.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.function.parent-enum.kind-icon:before {
+  background-position: -170px -170px;
+}
+.static.function.parent-enum.protected.kind-icon:before {
+  background-position: -187px -170px;
+}
+.static.function.parent-enum.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.function.parent-interface.kind-icon:before {
+  background-position: -204px -170px;
+}
+.static.function.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -170px;
+}
+
+.static.method.kind-icon:before {
+  background-position: -136px -170px;
+}
+.static.method.protected.kind-icon:before {
+  background-position: -153px -170px;
+}
+.static.method.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.method.parent-class.kind-icon:before {
+  background-position: -51px -170px;
+}
+.static.method.parent-class.inherited.kind-icon:before {
+  background-position: -68px -170px;
+}
+.static.method.parent-class.protected.kind-icon:before {
+  background-position: -85px -170px;
+}
+.static.method.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -170px;
+}
+.static.method.parent-class.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.method.parent-enum.kind-icon:before {
+  background-position: -170px -170px;
+}
+.static.method.parent-enum.protected.kind-icon:before {
+  background-position: -187px -170px;
+}
+.static.method.parent-enum.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.method.parent-interface.kind-icon:before {
+  background-position: -204px -170px;
+}
+.static.method.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -170px;
+}
+
+.static.callable.kind-icon:before {
+  background-position: -136px -170px;
+}
+.static.callable.protected.kind-icon:before {
+  background-position: -153px -170px;
+}
+.static.callable.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.callable.parent-class.kind-icon:before {
+  background-position: -51px -170px;
+}
+.static.callable.parent-class.inherited.kind-icon:before {
+  background-position: -68px -170px;
+}
+.static.callable.parent-class.protected.kind-icon:before {
+  background-position: -85px -170px;
+}
+.static.callable.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -170px;
+}
+.static.callable.parent-class.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.callable.parent-enum.kind-icon:before {
+  background-position: -170px -170px;
+}
+.static.callable.parent-enum.protected.kind-icon:before {
+  background-position: -187px -170px;
+}
+.static.callable.parent-enum.private.kind-icon:before {
+  background-position: -119px -170px;
+}
+.static.callable.parent-interface.kind-icon:before {
+  background-position: -204px -170px;
+}
+.static.callable.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -170px;
+}
+
+.static.event.kind-icon:before {
+  background-position: -136px -187px;
+}
+.static.event.protected.kind-icon:before {
+  background-position: -153px -187px;
+}
+.static.event.private.kind-icon:before {
+  background-position: -119px -187px;
+}
+.static.event.parent-class.kind-icon:before {
+  background-position: -51px -187px;
+}
+.static.event.parent-class.inherited.kind-icon:before {
+  background-position: -68px -187px;
+}
+.static.event.parent-class.protected.kind-icon:before {
+  background-position: -85px -187px;
+}
+.static.event.parent-class.protected.inherited.kind-icon:before {
+  background-position: -102px -187px;
+}
+.static.event.parent-class.private.kind-icon:before {
+  background-position: -119px -187px;
+}
+.static.event.parent-enum.kind-icon:before {
+  background-position: -170px -187px;
+}
+.static.event.parent-enum.protected.kind-icon:before {
+  background-position: -187px -187px;
+}
+.static.event.parent-enum.private.kind-icon:before {
+  background-position: -119px -187px;
+}
+.static.event.parent-interface.kind-icon:before {
+  background-position: -204px -187px;
+}
+.static.event.parent-interface.inherited.kind-icon:before {
+  background-position: -221px -187px;
+}

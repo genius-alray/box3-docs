@@ -1,0 +1,31 @@
+/* .kind-icon:hover,
+button:hover,
+a:hover {
+  border-color: rgba(32, 148, 243, 0.5);
+} */
+anchor {
+  height: 0;
+}
+summary,
+img {
+  border: 1px solid transparent;
+  transition-duration: 0.25s !important;
+  cursor: pointer;
+  box-shadow: 0 0 3px transparent;
+}
+
+summary:active,
+img:active {
+  border-color: #2094f3 !important;
+  background: rgba(32, 148, 243, 0.5) !important;
+  box-shadow: 0 0 3px #2094f3 !important;
+  transition-duration: 0s !important;
+}
+
+/*解决双层active效果*/
+a > a:active,
+a > .kind-icon:active {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
